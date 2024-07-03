@@ -53,7 +53,7 @@ export default function Team() {
 
   const TeammateCard = ({ teammate }) => (
     <div className="flex flex-col justify-start items-start gap-[16px] rounded-[20px] border-[1px]">
-      <div className="relative w-full h-[240px]">
+      <div className="relative w-full pb-[75%]">
 
       <div className="absolute w-full inset-0 bg-cover bg-no-repeat bg-center rounded-t-[20px]" style={{ backgroundImage: `url(${defaultimg})` }}
         ></div>
