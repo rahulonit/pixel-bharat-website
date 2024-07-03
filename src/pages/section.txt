@@ -1,0 +1,47 @@
+     clients section
+        <div className='flex flex-col space-y-8 '>
+          <h2 className='text-[#ABABAB] flex px-8 text-[20px] font-medium'>CLIENTS .</h2>
+          <h3 className='flex px-8 text-[#141414] text-[40px] font-semibold'>What people say about us?</h3>
+
+          <div className="flex flex-col items-center w-full overflow-hidden">
+      <div className="flex flex-row gap-8 px-8 justify-between items-center w-full">
+        <button onClick={handlePrev}>
+          <LeftIcon />
+        </button>
+
+        <div className="relative w-10/12 overflow-hidden flex justify-center">
+ 
+
+  {/* Content */}
+  <div className="flex flex-row gap-16 mb-10 transition-transform duration-300" style={{ transform: `translateX(${currentSlide === 0 ? 33 :
+             currentSlide === 1 ? 0 : -33}%)`, width: `${clients.length * 100}%` }}>
+    {clients.map((client, index) => (
+      <div key={index} className="flex justify-center w-full">
+        <ClientCard client={client} />
+      </div>
+    ))}
+  </div>
+   {/* Gradient overlay */}
+   <div className="absolute inset-0" style={{ 
+    backgroundImage: 'linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.00) 25%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.00) 74.52%, #FFFFFF 100%)',
+    pointerEvents: 'none' 
+  }}></div>
+</div>
+        <button onClick={handleNext}>
+          <RightIcon />
+        </button>
+      </div>
+
+      <div className="flex flex-row justify-center gap-4 items-center pt-10 fill linear-gradient-to-r from-white via-transparent to-white">
+        {clients.map((_, index) => (
+        <button
+            key={index}
+            className={`w-[30px] h-[6px] rounded-[10px]  ${currentSlide === index ? 'bg-[var(--Grays-Black,_#000)] w-[90px]' : 'bg-[#D9D9D9]'}`}
+            onClick={() => handleDotClick(index)}
+          />
+        ))}
+      </div>
+    </div>
+
+        </div>
+    
