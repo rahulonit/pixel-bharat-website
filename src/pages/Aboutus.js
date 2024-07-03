@@ -111,10 +111,10 @@ export default function Aboutus() {
             <h2 className='text-[#ABABAB] text-[20px] font-medium'>About Us</h2>
             <h3 className='text-[#141414] text-[24px] font-semibold'>Pixel Bharat: Empowering Businesses with Innovation</h3>
             <div>
-              <button
+              <a href="/careers"
               onMouseEnter={handleMouseEnterContact}
               onMouseLeave={handleMouseLeaveContact}
-              className=' py-3 px-8 p justify-center items-start gap-[8px] rounded-[100px] bg-[var(--Default-Black,_#000)] flex-[1_0_0] text-[16px] font-semibold text-white hover:shadow-xl  hover:bg-white hover:border-[1px] border-[1px] border-black hover:border-gray-300 hover:text-black'>Join Us</button>
+              className=' py-3 px-8 p justify-center items-start gap-[8px] rounded-[100px] bg-[var(--Default-Black,_#000)] flex-[1_0_0] text-[16px] font-semibold text-white hover:shadow-xl  hover:bg-white hover:border-[1px] border-[1px] border-black hover:border-gray-300 hover:text-black'>Join Us</a>
             </div>
           </div>
           <div className='md:w-1/2'>
