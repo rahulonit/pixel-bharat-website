@@ -7,6 +7,8 @@ import Collaborate from '../componets/Collaborate';
 import Carousel from '../componets/Carousel';
 import ProfilePic from '../assets/profile.png';
 
+import defaultimg from '../assets/default_img.png'
+
 import config from '../config';
 import { ReactComponent as FacebookIcon } from '../assets/Team/facebook-icon-Team.svg';
 import { ReactComponent as InstagramIcon } from '../assets/Team/instagram-icon-Team.svg';
@@ -50,10 +52,15 @@ export default function Team() {
   }, []);
 
   const TeammateCard = ({ teammate }) => (
-    <div className="flex flex-col justify-center items-start gap-[16px] rounded-[20px] border-[1px]">
-      <div className="relative w-full">
-        <div className="absolute w-full inset-0 bg-cover bg-no-repeat bg-center rounded-t-[20px]" style={{ backgroundImage: `url(${teammate.image})`, backgroundColor: 'lightgray' }}></div>
-        <img src={config.apiUrl + teammate.image} alt={teammate.name} className="relative w-full rounded-t-[20px]" />
+    <div className="flex flex-col justify-start items-start gap-[16px] rounded-[20px] border-[1px]">
+      <div className="relative w-full h-[240px]">
+
+      <div className="absolute w-full inset-0 bg-cover bg-no-repeat bg-center rounded-t-[20px]" style={{ backgroundImage: `url(${defaultimg})` }}
+        ></div>
+      
+        <div className="absolute w-full inset-0 bg-cover bg-no-repeat bg-center rounded-t-[20px]" style={{ backgroundImage: `url(${config.apiUrl + teammate.image.replace(/\\/g, '/')})` }}
+        ></div>
+
       </div>
       <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-2">
