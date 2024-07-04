@@ -159,7 +159,7 @@ export default function Career() {
       {/* heading section */}
       <div className='w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8'>
           <div className='w-full'>
-            <h1 className='text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold'>
+            <h1 className='text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold'>
             Careers  <br/>
             with Pixel  Bharat
             </h1>

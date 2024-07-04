@@ -93,7 +93,7 @@ export default function FindJob() {
 
       <div className='w-full flex flex-col py-10 space-y-20'>
         {/* heading section */}
-        <h1 className='text-[#141414] px-8 text-[36px] sm:text-[48px] lg:text-[64px] font-bold'>Find a Job</h1>
+        <h1 className='text-[#141414] px-8 text-[36px] sm:text-[48px] lg:text-[74px] font-bold'>Find a Job</h1>
 
         {/* poster section */}
         <div className='w-full h-1/2 px-8 rounded-[30px]'>

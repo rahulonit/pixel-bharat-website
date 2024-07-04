@@ -7,7 +7,7 @@ import Collaborate from '../componets/Collaborate';
 import Carousel from '../componets/Carousel';
 import ProfilePic from '../assets/profile.png';
 
-import defaultimg from '../assets/default_img.png'
+import defaultimg from '../assets/default_img.png';
 
 import config from '../config';
 import { ReactComponent as FacebookIcon } from '../assets/Team/facebook-icon-Team.svg';
@@ -51,16 +51,16 @@ export default function Team() {
     fetchData();
   }, []);
 
+  const backgroundColors = ["#F1CBC3", "#E8F1C3", "#C3F1F1", "#DEDCFB", "#FFE3CE", "#FFEFBF"];
+
+  const getRandomBackgroundColor = () => {
+    return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+  };
+  
   const TeammateCard = ({ teammate }) => (
-    <div className="flex flex-col justify-start items-start gap-[16px] rounded-[20px] border-[1px]">
-      <div className="relative w-full pb-[75%]">
-
-      <div className="absolute w-full inset-0 bg-cover bg-no-repeat bg-center rounded-t-[20px]" style={{ backgroundImage: `url(${defaultimg})` }}
-        ></div>
-      
-        <div className="absolute w-full inset-0 bg-cover bg-no-repeat bg-center rounded-t-[20px]" style={{ backgroundImage: `url(${config.apiUrl + teammate.image.replace(/\\/g, '/')})` }}
-        ></div>
-
+    <div className="flex flex-col justify-start items-start gap-[16px] rounded-[20px] border-[1px] rounded-t-[20px] overflow-hidden">
+      <div className="relative w-full flex justify-center items-end lg:h-[230px]" style={{ background: getRandomBackgroundColor() }}>
+        <img src={config.apiUrl + teammate.image.replace(/\\/g, '/')} alt="" className="bottom-0 w-[220px] inset-0 object-cover" />
       </div>
       <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-2">
@@ -86,6 +86,7 @@ export default function Team() {
       </div>
     </div>
   );
+
   const handleMouseEnterContact = () => {
     setIsHoveringContact(true);
     const dotElement = document.getElementById('dot');
@@ -106,10 +107,10 @@ export default function Team() {
     <div className={`page ${isVisible ? 'slide-in' : ''}`}>
       <Header />
       <div className="blur-section">
-        <div className="w-full flex flex-col  py-10 space-y-20">
+        <div className="w-full flex flex-col  pt-10 space-y-20">
           {/* main heading */}
 
-          <h1 className="text-[#141414] text-[36px] sm:text-[48px] lg:text-[64px] font-bold px-8">From the start, we sought discovery.</h1>
+          <h1 className="text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold px-8">From the start, we sought discovery.</h1>
 
           {/* poster */}
           <div className="w-full h-1/2 px-8 rounded-[30px]">
@@ -158,7 +159,7 @@ export default function Team() {
                 </div>
                 {/* Button */}
                 <div>
-                  <a href='/careers' className="py-3 px-8 rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
+                  <a href="/careers" className="py-3 px-8 rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
                     Join Us
                   </a>
                 </div>
@@ -169,10 +170,16 @@ export default function Team() {
             <div className="p-8 flex flex-col gap-8">
               <h2 className="text-[#141414] text-[24px] font-semibold">Meet the Team</h2>
               <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
-                {teammates.map((teammate, index) => (
-                  <TeammateCard key={index} teammate={teammate} />
-                ))}
-              </div>
+  {teammates.map((teammate, index) => (
+    <div
+      key={index}
+      className={`col-span-1 ${index >= teammates.length - 3 ? 'lg:col-span-1' : ''}`}
+    >
+      <TeammateCard teammate={teammate} />
+    </div>
+  ))}
+</div>
+
             </div>
 
             {/* Latest works */}
@@ -184,7 +191,7 @@ export default function Team() {
 
                   {/* Button */}
                   <div>
-                    <a href='/project' className="py-3 px-8  rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
+                    <a href="/project" className="py-3 px-8  rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
                       See our projects
                     </a>
                   </div>
@@ -206,9 +213,10 @@ export default function Team() {
           </div>
 
           <Collaborate />
-          <Footer />
         </div>
       </div>
+      <Footer />
+
     </div>
   );
 }

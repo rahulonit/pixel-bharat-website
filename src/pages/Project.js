@@ -45,7 +45,7 @@ export default function Project() {
       <div className='blur-section'>
         <div className='px-8 py-10 '>
           <div className='pb-6 sm:pb-8'>
-            <h1 className='text-[#141414] text-[36px] sm:text-[48px] lg:text-[64px] font-bold'>
+            <h1 className='text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold'>
               Design Kits for Creative <br className='hidden sm:block' /> Designers
             </h1>
           </div>

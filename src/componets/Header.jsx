@@ -7,7 +7,7 @@ import { ReactComponent as FacebookIcon } from "../assets/facebook.svg";
 import { ReactComponent as TwitterIcon } from "../assets/twitter.svg";
 import { ReactComponent as InstagramIcon } from "../assets/instagram.svg";
 import { ReactComponent as NavbarArrow } from "../assets/navbar-arraow.svg";
-import NewLogo from "../assets/newLogo.png"
+import NewLogo from "../assets/logo.png"
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

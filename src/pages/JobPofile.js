@@ -71,7 +71,7 @@ console.log('fetchJobData');
       <Header />
       <div className="w-full flex flex-col py-10 space-y-20">
         <div className="flex flex-col gap-4 px-8">
-          <h1 className="text-[#141414] text-[36px] sm:text-[48px] lg:text-[64px] font-bold">{job.title}</h1>
+          <h1 className="text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold">{job.title}</h1>
           <div className="flex flex-col gap-2">
             <div className="flex flex-row gap-4 items-center">
               <Location className="w-[22px] h-[33px]" />

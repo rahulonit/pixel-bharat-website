@@ -1,10 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
 import VideoPoster from '../assets/video-poster.png'
+import CollabPopup from './Collabpopup';
 
 const VideoBackground = () => {
   const video = require('../assets/vedio.mp4'); // Ensure correct path and naming
   const [isHoveringContact, setIsHoveringContact] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // state to manage popup visibility
+
+  const handlePopupOpen = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handlePopupClose = () => {
+    setIsPopupOpen(false);
+  };
 
 
   const handleMouseEnterContact = () => {
@@ -44,13 +54,17 @@ const VideoBackground = () => {
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-[#141414]">
           <h1 className="text-[#141414] text-[36px] sm:text-[48px] text-center md:text-[56px] lg:text-[64px] font-bold">Let's collaborate</h1>
           {/* Button */}
-          <a  href="/contact" className='py-3 px-8 rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black'
+          <button className='py-3 px-8 rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black'
           onMouseEnter={handleMouseEnterContact}
+          onClick={handlePopupOpen} 
           onMouseLeave={handleMouseLeaveContact}>
             Start Now!
-          </a>
+          </button>
         </div>
       </div>
+      {isPopupOpen && (
+        <CollabPopup  onClose={handlePopupClose} />
+      )}
     </div>
   );
 };

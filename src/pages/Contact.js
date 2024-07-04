@@ -92,7 +92,7 @@ export default function Contact() {
         <div className='w-full lg:w-1/2 flex flex-col space-y-3 pb-8'>
           <HandIcon className='w-16 h-16 pb-8' />
 
-          <h1 className='text-[#141414] text-[32px] lg:text-[64px] font-bold'>Become a client</h1>
+          <h1 className='text-[#141414] text-[32px] lg:text-[74px] font-bold'>Become a client</h1>
 
           <p className='text-[#4A4A4A] text-[16px] lg:text-[20px] font-medium'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam. Odio euismod lacinia at quis. Urna et pharetra pharetra massa.

@@ -57,7 +57,7 @@ export default function Service() {
           {/* main heading */}
 
           <div className="mx-8 ">
-            <h1 className="pb-10 text-[#141414] text-[36px] sm:text-[48px] lg:text-[64px] font-bold">{service.title}</h1>
+            <h1 className="pb-10 text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold">{service.title}</h1>
             {/* <hr /> */}
           </div>
 
