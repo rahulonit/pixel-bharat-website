@@ -510,12 +510,12 @@ export default function Contact() {
                   className='flex justify-between px-4 py-2 flex-col items-center rounded-[24px] border-[2px] cursor-pointer'
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span className='flex justify-between w-full items-center'>
-                  <h6 className='text-[#4A4A4A] text-[24px] font-semibold md:text-[18px]'>{faq.question}</h6>
+                  <span className='flex pl-4  justify-between w-full items-center'>
+                  <h6 className='text-[#4A4A4A] text-[24px] font-semibold '>{faq.question}</h6>
                   <h6 className='text-[#4A4A4A] text-[24px] md:text-[44px] font-medium'>{openIndex === index ? '-' : '+'}</h6>
                   </span>
                   <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
-                    <div className="answer-content">
+                    <div className="pl-4 pb-4">
                       <hr />
                       <br />
                       <p className="text-[20px] text-[#4A4A4A]">{faq.answer}</p>

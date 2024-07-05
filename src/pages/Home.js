@@ -536,33 +536,33 @@ export default function Home() {
           </div>
 
           {/* next about section */}
-          <div ref={cus12Ref} className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#F2F2F2]" style={{ minHeight: '510px' }}>
+          <div ref={cus12Ref} className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#000]" style={{ minHeight: '510px' }}>
             <div className="flex flex-col justify-between w-full">
               <div className="flex space-x-3 items-center">
-                <LoadingIcon className="w-[32px] h-[32px]" />
-                <h4 className="text-[#4A4A4A] text-[16px] font-medium">Next about</h4>
+                <LoadingIcon className=" w-[32px] h-[32px]" />
+                <h4 className="text-[#fff] text-[20px] font-medium">Next about you</h4>
               </div>
-
+                <h1 className="text-[#fff] text-[74px] font-bold leading-100">Unforgettable mark on your digital presence</h1 >
               <div className="flex flex-col space-y-[48px]">
-                <h3 className="text-[#4A4A4A] text-[18px] font-semibold">Art of innovation and leaves an unforgettable mark on your digital presence</h3>
+                <h3 className="text-[#fff] text-[20px] font-medium">Pushing the boundaries of what's possible, driven by a passion <br></br>for discovery and excellence.</h3>
                 <div className="flex flex-wrap gap-3 ">
                   <div>
-                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[var(--Purple-900,_#160D27)] text-center text-[14px] font-semibold text-white hover:shadow-xl  hover:bg-white  hover:border-gray-300 hover:text-black">
+                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[#ffffff] text-center text-[14px] font-semibold text-[#5E5E5E] shadow-xl">
                       Logo
                     </button>
                   </div>
                   <div>
-                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[var(--Purple-900,_#160D27)] text-center text-[14px] font-semibold text-white hover:shadow-xl  hover:bg-white  hover:border-gray-300 hover:text-black">
+                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[#ffffff] text-center text-[14px] font-semibold text-[#5E5E5E] shadow-xl">
                       Branding
                     </button>
                   </div>
                   <div>
-                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[var(--Purple-900,_#160D27)] text-center text-[14px] font-semibold text-white hover:shadow-xl  hover:bg-white  hover:border-gray-300 hover:text-black">
+                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[#ffffff] text-center text-[14px] font-semibold text-[#5E5E5E] shadow-xl">
                       Social
                     </button>
                   </div>
                   <div>
-                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[var(--Purple-900,_#160D27)] text-center text-[14px] font-semibold text-white hover:shadow-xl  hover:bg-white  hover:border-gray-300 hover:text-black">
+                    <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[#ffffff] text-center text-[14px] font-semibold text-[#5E5E5E] shadow-xl">
                       Brand Identity
                     </button>
                   </div>
@@ -574,7 +574,7 @@ export default function Home() {
           </div>
 
           {/* recent works section */}
-          <div ref={cus13Ref} className="flex flex-col space-y-8 ">
+          <div ref={cus13Ref} className="flex flex-col space-y-10">
             <h2 className="text-[#ABABAB] px-8 text-[20px] font-medium">RECENT WORKS</h2>
             <div className="flex px-8 lg:items-center  justify-between lg:flex-row flex-col gap-8">
               <p className="text-[#4A4A4A] text-[20px]">Discover our latest projects that showcase our expertise and innovation. From dynamic social media campaigns to cutting-edge UX/UI designs, each project reflects our commitment to excellence and creativity. Explore our portfolio to see how we bring visions to life. </p>
@@ -595,25 +595,29 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col space-y-4 w-full md:w-1/2">
-              {faqs.map((faq, index) => (
-                <div ref={faq.ref} key={index} className="faq-item">
-                  <div onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex justify-between px-4 py-2 flex-col items-center rounded-[24px] border-[2px] cursor-pointer" onClick={() => toggleAccordion(index)}>
-                    <span className="flex justify-between w-full items-center">
-                      <h6 className="text-[#4A4A4A] text-[24px] font-semibold md:text-[18px]">{faq.question}</h6>
-                      <h6 className="text-[#4A4A4A] text-[24px] md:text-[44px] font-medium">{openIndex === index ? '-' : '+'}</h6>
-                    </span>
-                  
-                      <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
-                      <div className="px-4 py-2 md:px-6 md:py-4 answer-content">
-                        <hr />
-                        <br></br>
-                        <p className="text-[20px] text-[#4A4A4A] ">{faq.answer}</p>
-                      </div>
-                      </div>
-                  
+            {faqs.map((faq, index) => (
+              <div ref={faq.ref} key={index} className='flex flex-col'>
+                <div
+                onMouseEnter={handleMouseEnterContact}
+                onMouseLeave={handleMouseLeaveContact}
+                  className='flex justify-between px-4 py-2 flex-col items-center rounded-[24px] border-[2px] cursor-pointer'
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <span className='flex pl-4  justify-between w-full items-center'>
+                  <h6 className='text-[#4A4A4A] text-[24px] font-medium '>{faq.question}</h6>
+                  <h6 className='text-[#4A4A4A] text-[24px] md:text-[44px] font-medium'>{openIndex === index ? '-' : '+'}</h6>
+                  </span>
+                  <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
+                    <div className="pl-4 pb-4">
+                      <hr />
+                      <br />
+                      <p className="text-[20px] text-[#4A4A4A]">{faq.answer}</p>
+                    </div>
                   </div>
                 </div>
-              ))}
+              
+              </div>
+            ))}
             </div>
           </div>
 

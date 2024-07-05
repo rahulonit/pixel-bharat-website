@@ -429,8 +429,8 @@ export default function Aboutus() {
     { number: '02', heading: 'Reduced Costs', para: 'Our efficient strategies and tools help reduce costs, ensuring you get the best value for your investment in Social Media Marketing, UX/UI Design, and Development services.', color1: '#000000', color2: '#ABABAB', color3: '#FFFFFF', ref: faq2Ref },
     { number: '03', heading: 'More Customization', para: 'We understand that each business is unique. Our services are tailored to meet your specific needs, providing customized solutions that align with your business goals.', color1: '#FFFFFF', color2: '#ABABAB', color3: '#000000', ref: faq3Ref },
     { number: '04', heading: 'Affordable Pricing', para: 'Experience top-quality services at competitive prices. We believe in delivering value and excellence without exceeding your budget.', color1: '#000000', color2: '#ABABAB', color3: '#FFFFFF', ref: faq4Ref },
-    { number: '05', heading: 'Learner Satisfaction', para: 'Our commitment to collaboration and excellence ensures high levels of client satisfaction. Join our list of happy clients who have achieved remarkable success with our help.', color1: '#FFFFFF', color2: '#ABABAB', color3: '#000000', ref: faq5Ref },
-    { number: '06', heading: 'Multimedia Materials', para: 'We provide a wide range of resources to enhance your digital presence, from engaging social media content to user-friendly website designs.', color1: '#000000', color2: '#ABABAB', color3: '#FFFFFF', ref: faq6Ref }
+    { number: '05', heading: 'Client Satisfaction', para: 'Our commitment to collaboration and excellence ensures high levels of client satisfaction. Join our list of happy clients who have achieved remarkable success with our help.', color1: '#FFFFFF', color2: '#ABABAB', color3: '#000000', ref: faq5Ref },
+    { number: '06', heading: 'Comprehensive Resources', para: 'We provide a wide range of resources to enhance your digital presence, from engaging social media content to user-friendly website designs.', color1: '#000000', color2: '#ABABAB', color3: '#FFFFFF', ref: faq6Ref }
   ];
 
   const Card = Carddata.map((item, index) => {
@@ -499,7 +499,7 @@ export default function Aboutus() {
             <div className="md:w-1/2">
               <p className=" text-[#4A4A4A] text-[16px] font-medium">
                 Pixel Bharat is a premier service-based company based in Delhi, specializing in Social Media Marketing, UX/UI Design, and Development services. Since our establishment, we have been dedicated to helping businesses grow and succeed in the digital landscape through innovative and tailored solutions.
-                <br />
+               <br /><br />
                 Our mission is to deliver exceptional services that drive results and provide our clients with a competitive edge. With a team of experienced professionals, we are committed to excellence and innovation in everything we do.{' '}
               </p>
             </div>
@@ -534,7 +534,7 @@ export default function Aboutus() {
         </div>
 
         <Collaborate />
-        <div className="w-full flex flex-col  pb-10 space-y-20">
+        <div className="w-full flex flex-col  pb-8 space-y-20">
         <Footer />
         </div>
       </div>

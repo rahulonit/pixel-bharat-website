@@ -72,6 +72,7 @@ export default function Team() {
   const cus12Ref = useRef(null)
   const cus13Ref = useRef(null)
   const cus14Ref = useRef(null)
+  const cus15Ref = useRef(null)
   const mainfaqRef=useRef(null)
   const faq1Ref=useRef(null)
   const faq2Ref=useRef(null)
@@ -97,6 +98,8 @@ export default function Team() {
     const cus12 = cus12Ref.current
     const cus13 = cus13Ref.current
     const cus14 = cus14Ref.current
+    const cus15 = cus14Ref.current
+
     const mainfaq=mainfaqRef.current
     const faq1=faq1Ref.current
     const faq2=faq2Ref.current
@@ -233,6 +236,18 @@ export default function Team() {
         trigger: cus14,
         markers: false,
         start: "top 100%"
+      }
+    })
+    gsap.from(cus15, {
+      y: 150,
+      opacity: 0,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+
+        markers: false,
+        start: "bottom 120%"
       }
     })
     gsap.from(mainfaq, {
@@ -433,7 +448,7 @@ export default function Team() {
             {/* Team section */}
             <div  className="p-8 flex flex-col gap-8">
               <h2  className="text-[#141414] text-[24px] font-semibold">Meet the Team</h2>
-              <div ref={cus10Ref}  className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
+              <div ref={cus15Ref}  className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                 {teammates.map((teammate, index) => (
                   <TeammateCard key={index} teammate={teammate}  />
                 ))}
