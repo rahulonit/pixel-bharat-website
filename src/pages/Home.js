@@ -8,7 +8,6 @@ import { ReactComponent as LockIcon } from '../assets/lockicon.svg';
 import { ReactComponent as LoadingIcon } from '../assets/Loading-icon.svg';
 import laptop from '../assets/laptop.png';
 import TestimonalPic from '../assets/testimonalpic.png';
-
 import FigmaIcon from '../assets/toolsIcons/figma-icon.png';
 import XDIcon from '../assets/toolsIcons/XD-ICON.png';
 import AeIcon from '../assets/toolsIcons/AE-ICON.png';
@@ -46,6 +45,14 @@ import { useNavigate } from 'react-router-dom';
 import Cursor from '../componets/cursor';
 
 import { serviceData } from '../data/serviceData';
+import { useRef } from 'react';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(useGSAP);
 
 const skills = [
   {
@@ -81,13 +88,7 @@ const cardData3 = [
   }
 ];
 
-const faqs = [
-  { question: 'What services does Pixel Bharat offer?', answer: 'Pixel Bharat offers a range of services including Social Media Marketing, UX/UI Design, and Development. Our goal is to enhance your brand’s online presence and provide robust, scalable, and efficient solutions to drive your business forward.' },
-  { question: 'How can Pixel Bharat help improve my social media presence?', answer: 'Our social media marketing services include cutting-edge strategies tailored to captivate and convert your audience. We focus on enhancing your brand engagement and visibility across various social media platforms, ensuring a consistent and impactful online presence.' },
-  { question: 'What sets Pixel Bharat apart from other digital service providers?', answer: 'At Pixel Bharat, we believe in the power of collaboration and excellence. Our team of experienced professionals is dedicated to delivering innovative and tailored solutions that drive success for our clients. We prioritize quality, creativity, and client satisfaction, making us a trusted partner in the industry.' },
-  { question: 'What benefits can I expect from partnering with Pixel Bharat?', answer: 'By partnering with Pixel Bharat, you gain access to a range of benefits including standardized approaches for brand consistency, reduced costs through efficient strategies, customized solutions tailored to your business needs, affordable pricing, high levels of client satisfaction, and comprehensive resources to enhance your digital presence.' },
-  { question: 'How can I join the Pixel Bharat team?', answer: 'We are always looking for talented and dedicated professionals who are passionate about what they do. If you are interested in joining our team, please visit our Careers page to explore current opportunities and find your career with Pixel Bharat.' }
-];
+
 
 const clients = [
   {
@@ -116,6 +117,8 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
   const [isHoveringContact, setIsHoveringContact] = useState(false);
+
+
 
   const handleMouseEnterContact = () => {
     setIsHoveringContact(true);
@@ -166,6 +169,252 @@ export default function Home() {
     navigate(`/service/${services.title}`);
   };
 
+  const textheadRef = useRef(null)
+  const cus1Ref = useRef(null)
+  const cus2Ref = useRef(null)
+  const cus3Ref = useRef(null)
+  const cus4Ref = useRef(null)
+  const cus5Ref = useRef(null)
+  const cus6Ref = useRef(null)
+  const cus7Ref = useRef(null)
+  const cus8Ref = useRef(null)
+  const cus9Ref = useRef(null)
+  const cus10Ref = useRef(null)
+  const cus11Ref = useRef(null)
+  const cus12Ref = useRef(null)
+  const cus13Ref = useRef(null)
+  const cus14Ref = useRef(null)
+  const mainfaqRef = useRef(null)
+  const faq1Ref = useRef(null)
+  const faq2Ref = useRef(null)
+  const faq3Ref = useRef(null)
+  const faq4Ref = useRef(null)
+  const faq5Ref = useRef(null)
+
+
+
+  useGSAP(() => {
+    const texthead = textheadRef.current
+    const cus1 = cus1Ref.current
+    const cus2 = cus2Ref.current
+    const cus3 = cus3Ref.current
+    const cus4 = cus4Ref.current
+    const cus5 = cus5Ref.current
+    const cus6 = cus6Ref.current
+    const cus7 = cus7Ref.current
+    const cus8 = cus8Ref.current
+    const cus9 = cus9Ref.current
+    const cus10 = cus10Ref.current
+    const cus11 = cus11Ref.current
+    const cus12 = cus12Ref.current
+    const cus13 = cus13Ref.current
+    const cus14 = cus14Ref.current
+    const mainfaq = mainfaqRef.current
+    const faq1 = faq1Ref.current
+    const faq2 = faq2Ref.current
+    const faq3 = faq3Ref.current
+    const faq4 = faq4Ref.current
+    const faq5 = faq5Ref.current
+    gsap.from(texthead, {
+      x: -400,
+      opacity: 0,
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: texthead,
+        markers: false,
+        start: "top 100%"
+      }
+    });
+
+
+    gsap.from(cus1, {
+      yPercent: 350,
+      duration: 2.3,
+      ease: "power4",
+      smooth: 1,
+    });
+    gsap.from(cus2, {
+      yPercent: 350,
+
+      duration: 1.6,
+      smooth: 1,
+
+    });
+    gsap.from(cus3, {
+      yPercent: 350,
+      duration: 2.6,
+      smooth: 1,
+    })
+    gsap.from(cus4, {
+      yPercent: 350,
+      duration: 2.1,
+      smooth: 1,
+    })
+    gsap.from(cus5, {
+      yPercent: 350,
+      duration: 1.3,
+      smooth: 1,
+    })
+    gsap.from(cus6, {
+      yPercent: 350,
+      duration: 1.5,
+      smooth: 1,
+    })
+    gsap.from(cus7, {
+      yPercent: 200,
+      opacity: 0,
+      duration: 1.2,
+      smooth: 1,
+    })
+    gsap.from(cus8, {
+      y: 400,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus8,
+        markers: false,
+        start: "top 150%"
+      }
+    })
+    gsap.from(cus9, {
+      y: 300,
+      opacity: 0,
+      duration: 1.3,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus9,
+        markers: false,
+        start: "top 150%"
+      }
+
+    })
+
+    gsap.from(cus10, {
+      y: 150,
+      opacity: 0,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+
+        markers: false,
+        start: "bottom 120%"
+      }
+    })
+    gsap.from(cus11, {
+      y: 150,
+      opacity: 0,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+
+        markers: false,
+        start: "bottom 10%"
+      }
+    })
+    gsap.from(cus12, {
+      y: 200,
+      opacity: 0,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+
+    gsap.from(cus13, {
+      y: 200,
+      opacity: 0,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus13,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+    gsap.from(cus14, {
+      y: 200,
+      opacity: 0,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus14,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+    gsap.from(mainfaq, {
+
+      scrollTrigger: {
+        trigger: mainfaq,
+        markers: false,
+        start: "bottom 20%"
+      }
+    })
+    gsap.from(faq1, {
+      yPercent: 300,
+      duration: 1,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: faq1,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+    gsap.from(faq2, {
+      yPercent: 550,
+      duration: 1.3,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: faq1,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+    gsap.from(faq3, {
+      yPercent: 600,
+      duration: 1.6,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: faq1,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+
+    gsap.from(faq4, {
+      yPercent: 650,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: faq1,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+    gsap.from(faq5, {
+      yPercent: 700,
+      duration: 2,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: faq1,
+        markers: false,
+        start: "top 100%"
+      }
+    })
+  })
+  const faqs = [
+    { question: 'What services does Pixel Bharat offer?', answer: 'Pixel Bharat offers a range of services including Social Media Marketing, UX/UI Design, and Development. Our goal is to enhance your brand’s online presence and provide robust, scalable, and efficient solutions to drive your business forward.', ref: faq1Ref },
+    { question: 'How can Pixel Bharat help improve my social media presence?', answer: 'Our social media marketing services include cutting-edge strategies tailored to captivate and convert your audience. We focus on enhancing your brand engagement and visibility across various social media platforms, ensuring a consistent and impactful online presence.', ref: faq2Ref },
+    { question: 'What sets Pixel Bharat apart from other digital service providers?', answer: 'At Pixel Bharat, we believe in the power of collaboration and excellence. Our team of experienced professionals is dedicated to delivering innovative and tailored solutions that drive success for our clients. We prioritize quality, creativity, and client satisfaction, making us a trusted partner in the industry.', ref: faq3Ref },
+    { question: 'What benefits can I expect from partnering with Pixel Bharat?', answer: 'By partnering with Pixel Bharat, you gain access to a range of benefits including standardized approaches for brand consistency, reduced costs through efficient strategies, customized solutions tailored to your business needs, affordable pricing, high levels of client satisfaction, and comprehensive resources to enhance your digital presence.', ref: faq4Ref },
+    { question: 'How can I join the Pixel Bharat team?', answer: 'We are always looking for talented and dedicated professionals who are passionate about what they do. If you are interested in joining our team, please visit our Careers page to explore current opportunities and find your career with Pixel Bharat.', ref: faq5Ref }
+  ];
+
   return (
     <div className={`page scroll-smooth ${isVisible ? 'slide-in' : ''}`}>
       <Header />
@@ -174,13 +423,14 @@ export default function Home() {
         <div className="w-full flex flex-col py-10 space-y-20">
           {/* tranform section */}
           <div className="w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8">
-            <div className="w-full">
-              <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold">
-                Transform your <br /> vision into reality!
+            <div className="w-full overflow-hidden">
+              <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold ">
+                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold hid flex gap-2.5 "><p ref={cus5Ref}> Transform</p><p ref={cus6Ref}> your</p></p>
+                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2.5"><p ref={cus2Ref}> vision</p><p ref={cus4Ref}> into</p> <p ref={cus3Ref}> reality!</p></p>
               </h1>
             </div>
             <div className="lg:w-2/3 w-full text-left lg:text-right mt-4 lg:mt-0">
-              <h4 className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">Pushing the boundaries of what's possible, driven by a passion for discovery and excellence.</h4>
+              <h4 ref={cus7Ref} className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">Pushing the boundaries of what's possible, driven by a passion for discovery and excellence.</h4>
             </div>
           </div>
 
@@ -213,10 +463,10 @@ export default function Home() {
 
           {/* our story section */}
           <div className="flex px-8 justify-center items-center">
-            <div className="relative flex w-full  lg:h-[510px] h-[650px]  flex-col my-10 justify-center  rounded-[36px] overflow-hidden">
+            <div ref={cus8Ref} className="relative flex w-full  lg:h-[510px] h-[650px]  flex-col my-10 justify-center  rounded-[36px] overflow-hidden">
               <video className="absolute inset-0 w-full h-full object-cover" src={video1} autoPlay loop muted playsInline />
               <div className="absolute inset-0"></div>
-              <div className="relative z-10 flex flex-col justify-between h-full text-[#141414] p-8 lg:p-16">
+              <div ref={cus9Ref} className="relative z-10 flex flex-col justify-between h-full text-[#141414] p-8 lg:p-16">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
                     <h1 className="text-[#141414] text-[24px] font-semibold">OUR STORY</h1>
@@ -243,10 +493,10 @@ export default function Home() {
           <div className="flex px-8 flex-col space-y-8 ">
             <h2 className="text-[#ABABAB] text-[20px] font-medium">SKILLS</h2>
 
-            <div className="text-[#141414] text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold">
+            <div ref={cus10Ref} className="text-[#141414] text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold">
               <div className="flex flex-wrap items-center gap-2">
                 <p>Unlock</p>
-                <LockIcon className="w-[80px] h-[60px] sm:w-[100px] sm:h-[70px] md:w-[127px] md:h-[90px] fill-[#141414]" />
+                <LockIcon className="w-[80px] h-[60px] sm:w-[100px] sm:h-[70px] md:w-[127px] md:h-[90px] fill-[#141414] flip" />
                 <p>your design</p>
               </div>
               <p>potential with our studio’s expertise</p>
@@ -268,10 +518,10 @@ export default function Home() {
           <div className="flex px-8 flex-col space-y-8 ">
             <div className="flex lg:justify-between lg:flex-row gap-8 flex-col item-center">
               <h1 className="text-[#141414] text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-semibold">Our Expertise</h1>
-             
+
             </div>
 
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
+            <div ref={cus11Ref} className="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
               {cardData3.map((card, index) => (
                 <div key={index} className="flex flex-col justify-center items-center gap-6 p-8 sm:p-8 rounded-[36px] border-[2px]">
                   <h4 className="text-[#000] text-center text-[18px] sm:text-[24px] md:text-[24px] lg:text-[28px] font-semibold">{card.title}</h4>
@@ -286,7 +536,7 @@ export default function Home() {
           </div>
 
           {/* next about section */}
-          <div className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#F2F2F2]" style={{ minHeight: '510px' }}>
+          <div ref={cus12Ref} className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#F2F2F2]" style={{ minHeight: '510px' }}>
             <div className="flex flex-col justify-between w-full">
               <div className="flex space-x-3 items-center">
                 <LoadingIcon className="w-[32px] h-[32px]" />
@@ -324,7 +574,7 @@ export default function Home() {
           </div>
 
           {/* recent works section */}
-          <div className="flex flex-col space-y-8 ">
+          <div ref={cus13Ref} className="flex flex-col space-y-8 ">
             <h2 className="text-[#ABABAB] px-8 text-[20px] font-medium">RECENT WORKS</h2>
             <div className="flex px-8 lg:items-center  justify-between lg:flex-row flex-col gap-8">
               <p className="text-[#4A4A4A] text-[20px]">Discover our latest projects that showcase our expertise and innovation. From dynamic social media campaigns to cutting-edge UX/UI designs, each project reflects our commitment to excellence and creativity. Explore our portfolio to see how we bring visions to life. </p>
@@ -339,26 +589,28 @@ export default function Home() {
 
           {/* faq section */}
           <div className="flex flex-col px-8 space-y-8  md:flex-row justify-between">
-            <div className=" flex-col space-y-8 w-full md:w-1/2">
+            <div ref={mainfaqRef} className=" flex-col space-y-8 w-full md:w-1/2">
               <h2 className="text-[#ABABAB] text-[20px] font-medium">FAQ</h2>
               <h3 className="text-[#141414] text-[30px] md:text-[40px] font-semibold">Answer to your questions</h3>
             </div>
 
             <div className="flex flex-col space-y-4 w-full md:w-1/2">
               {faqs.map((faq, index) => (
-                <div key={index} className="flex flex-col">
+                <div ref={faq.ref} key={index} className="faq-item">
                   <div onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex justify-between px-4 py-2 flex-col items-center rounded-[24px] border-[2px] cursor-pointer" onClick={() => toggleAccordion(index)}>
                     <span className="flex justify-between w-full items-center">
                       <h6 className="text-[#4A4A4A] text-[24px] font-semibold md:text-[18px]">{faq.question}</h6>
                       <h6 className="text-[#4A4A4A] text-[24px] md:text-[44px] font-medium">{openIndex === index ? '-' : '+'}</h6>
                     </span>
-                    {openIndex === index && (
-                      <div className="px-4 py-2 md:px-6 md:py-4">
+                  
+                      <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
+                      <div className="px-4 py-2 md:px-6 md:py-4 answer-content">
                         <hr />
                         <br></br>
                         <p className="text-[20px] text-[#4A4A4A] ">{faq.answer}</p>
                       </div>
-                    )}
+                      </div>
+                  
                   </div>
                 </div>
               ))}
