@@ -30,6 +30,10 @@ import { ReactComponent as StarIcon } from '../assets/Star-icon.svg';
 import { ReactComponent as LeftIcon } from '../assets/left-icon.svg';
 import { ReactComponent as RightIcon } from '../assets/right-icon.svg';
 
+import Lottie from 'react-lottie';
+import figmalottie from '../lotties/figma.json';
+import photoshop from '../lotties/photoshop.json';
+
 import SkillIcon1 from '../assets/skill-animated-icon1.gif';
 import SkillIcon2 from '../assets/skill-animated-icon2.gif';
 import SkillIcon3 from '../assets/skill-animation-icon3.gif';
@@ -46,12 +50,11 @@ import Cursor from '../componets/cursor';
 
 import { serviceData } from '../data/serviceData';
 import { useRef } from 'react';
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const skills = [
@@ -76,19 +79,32 @@ const skills = [
     imageSrc: SkillIcon5 // Add your image source here
   }
 ];
-
+const figmaOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: figmalottie,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
+const photoshopOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: photoshop,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
 const cardData3 = [
   {
     title: 'Design Tools',
-    icons: [FigmaIcon, XDIcon, AeIcon, Diamond, PsIcon, AiIcon, IdIcon, DesignIcon]
+    icons: [figmaOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions]
   },
   {
     title: 'Development Using',
-    icons: [JavaIcon, ReactNativeIcon, PhpIcon, SqlIcon, MongoDBicon, HTMLicon, NodeIcon, FlutterIcon]
+    icons: [photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions],
   }
 ];
-
-
 
 const clients = [
   {
@@ -117,8 +133,6 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
   const [isHoveringContact, setIsHoveringContact] = useState(false);
-
-
 
   const handleMouseEnterContact = () => {
     setIsHoveringContact(true);
@@ -169,52 +183,50 @@ export default function Home() {
     navigate(`/service/${services.title}`);
   };
 
-  const textheadRef = useRef(null)
-  const cus1Ref = useRef(null)
-  const cus2Ref = useRef(null)
-  const cus3Ref = useRef(null)
-  const cus4Ref = useRef(null)
-  const cus5Ref = useRef(null)
-  const cus6Ref = useRef(null)
-  const cus7Ref = useRef(null)
-  const cus8Ref = useRef(null)
-  const cus9Ref = useRef(null)
-  const cus10Ref = useRef(null)
-  const cus11Ref = useRef(null)
-  const cus12Ref = useRef(null)
-  const cus13Ref = useRef(null)
-  const cus14Ref = useRef(null)
-  const mainfaqRef = useRef(null)
-  const faq1Ref = useRef(null)
-  const faq2Ref = useRef(null)
-  const faq3Ref = useRef(null)
-  const faq4Ref = useRef(null)
-  const faq5Ref = useRef(null)
-
-
+  const textheadRef = useRef(null);
+  const cus1Ref = useRef(null);
+  const cus2Ref = useRef(null);
+  const cus3Ref = useRef(null);
+  const cus4Ref = useRef(null);
+  const cus5Ref = useRef(null);
+  const cus6Ref = useRef(null);
+  const cus7Ref = useRef(null);
+  const cus8Ref = useRef(null);
+  const cus9Ref = useRef(null);
+  const cus10Ref = useRef(null);
+  const cus11Ref = useRef(null);
+  const cus12Ref = useRef(null);
+  const cus13Ref = useRef(null);
+  const cus14Ref = useRef(null);
+  const mainfaqRef = useRef(null);
+  const faq1Ref = useRef(null);
+  const faq2Ref = useRef(null);
+  const faq3Ref = useRef(null);
+  const faq4Ref = useRef(null);
+  const faq5Ref = useRef(null);
 
   useGSAP(() => {
-    const texthead = textheadRef.current
-    const cus1 = cus1Ref.current
-    const cus2 = cus2Ref.current
-    const cus3 = cus3Ref.current
-    const cus4 = cus4Ref.current
-    const cus5 = cus5Ref.current
-    const cus6 = cus6Ref.current
-    const cus7 = cus7Ref.current
-    const cus8 = cus8Ref.current
-    const cus9 = cus9Ref.current
-    const cus10 = cus10Ref.current
-    const cus11 = cus11Ref.current
-    const cus12 = cus12Ref.current
-    const cus13 = cus13Ref.current
-    const cus14 = cus14Ref.current
-    const mainfaq = mainfaqRef.current
-    const faq1 = faq1Ref.current
-    const faq2 = faq2Ref.current
-    const faq3 = faq3Ref.current
-    const faq4 = faq4Ref.current
-    const faq5 = faq5Ref.current
+    const texthead = textheadRef.current;
+    const cus1 = cus1Ref.current;
+    const cus2 = cus2Ref.current;
+    const cus3 = cus3Ref.current;
+    const cus4 = cus4Ref.current;
+    const cus5 = cus5Ref.current;
+    const cus6 = cus6Ref.current;
+    const cus7 = cus7Ref.current;
+    const cus8 = cus8Ref.current;
+    const cus9 = cus9Ref.current;
+    const cus10 = cus10Ref.current;
+    const cus11 = cus11Ref.current;
+    const cus12 = cus12Ref.current;
+    const cus13 = cus13Ref.current;
+    const cus14 = cus14Ref.current;
+    const mainfaq = mainfaqRef.current;
+    const faq1 = faq1Ref.current;
+    const faq2 = faq2Ref.current;
+    const faq3 = faq3Ref.current;
+    const faq4 = faq4Ref.current;
+    const faq5 = faq5Ref.current;
     gsap.from(texthead, {
       x: -400,
       opacity: 0,
@@ -222,50 +234,48 @@ export default function Home() {
       scrollTrigger: {
         trigger: texthead,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
     });
-
 
     gsap.from(cus1, {
       yPercent: 350,
       duration: 2.3,
-      ease: "power4",
-      smooth: 1,
+      ease: 'power4',
+      smooth: 1
     });
     gsap.from(cus2, {
       yPercent: 350,
 
       duration: 1.6,
-      smooth: 1,
-
+      smooth: 1
     });
     gsap.from(cus3, {
       yPercent: 350,
       duration: 2.6,
-      smooth: 1,
-    })
+      smooth: 1
+    });
     gsap.from(cus4, {
       yPercent: 350,
       duration: 2.1,
-      smooth: 1,
-    })
+      smooth: 1
+    });
     gsap.from(cus5, {
       yPercent: 350,
       duration: 1.3,
-      smooth: 1,
-    })
+      smooth: 1
+    });
     gsap.from(cus6, {
       yPercent: 350,
       duration: 1.5,
-      smooth: 1,
-    })
+      smooth: 1
+    });
     gsap.from(cus7, {
       yPercent: 200,
       opacity: 0,
       duration: 1.2,
-      smooth: 1,
-    })
+      smooth: 1
+    });
     gsap.from(cus8, {
       y: 400,
       duration: 1.8,
@@ -273,9 +283,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: cus8,
         markers: false,
-        start: "top 150%"
+        start: 'top 150%'
       }
-    })
+    });
     gsap.from(cus9, {
       y: 300,
       opacity: 0,
@@ -284,10 +294,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: cus9,
         markers: false,
-        start: "top 150%"
+        start: 'top 150%'
       }
-
-    })
+    });
 
     gsap.from(cus10, {
       y: 150,
@@ -298,9 +307,9 @@ export default function Home() {
         trigger: cus10,
 
         markers: false,
-        start: "bottom 120%"
+        start: 'bottom 120%'
       }
-    })
+    });
     gsap.from(cus11, {
       y: 150,
       opacity: 0,
@@ -310,9 +319,9 @@ export default function Home() {
         trigger: cus10,
 
         markers: false,
-        start: "bottom 10%"
+        start: 'bottom 10%'
       }
-    })
+    });
     gsap.from(cus12, {
       y: 200,
       opacity: 0,
@@ -321,9 +330,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: cus12,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
 
     gsap.from(cus13, {
       y: 200,
@@ -333,9 +342,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: cus13,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
     gsap.from(cus14, {
       y: 200,
       opacity: 0,
@@ -344,17 +353,16 @@ export default function Home() {
       scrollTrigger: {
         trigger: cus14,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
     gsap.from(mainfaq, {
-
       scrollTrigger: {
         trigger: mainfaq,
         markers: false,
-        start: "bottom 20%"
+        start: 'bottom 20%'
       }
-    })
+    });
     gsap.from(faq1, {
       yPercent: 300,
       duration: 1,
@@ -362,9 +370,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: faq1,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
     gsap.from(faq2, {
       yPercent: 550,
       duration: 1.3,
@@ -372,9 +380,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: faq1,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
     gsap.from(faq3, {
       yPercent: 600,
       duration: 1.6,
@@ -382,9 +390,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: faq1,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
 
     gsap.from(faq4, {
       yPercent: 650,
@@ -393,9 +401,9 @@ export default function Home() {
       scrollTrigger: {
         trigger: faq1,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
+    });
     gsap.from(faq5, {
       yPercent: 700,
       duration: 2,
@@ -403,10 +411,10 @@ export default function Home() {
       scrollTrigger: {
         trigger: faq1,
         markers: false,
-        start: "top 100%"
+        start: 'top 100%'
       }
-    })
-  })
+    });
+  });
   const faqs = [
     { question: 'What services does Pixel Bharat offer?', answer: 'Pixel Bharat offers a range of services including Social Media Marketing, UX/UI Design, and Development. Our goal is to enhance your brand’s online presence and provide robust, scalable, and efficient solutions to drive your business forward.', ref: faq1Ref },
     { question: 'How can Pixel Bharat help improve my social media presence?', answer: 'Our social media marketing services include cutting-edge strategies tailored to captivate and convert your audience. We focus on enhancing your brand engagement and visibility across various social media platforms, ensuring a consistent and impactful online presence.', ref: faq2Ref },
@@ -425,12 +433,20 @@ export default function Home() {
           <div className="w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8">
             <div className="w-full overflow-hidden">
               <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold ">
-                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold hid flex gap-2.5 "><p ref={cus5Ref}> Transform</p><p ref={cus6Ref}> your</p></p>
-                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2.5"><p ref={cus2Ref}> vision</p><p ref={cus4Ref}> into</p> <p ref={cus3Ref}> reality!</p></p>
+                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold hid flex gap-2.5 ">
+                  <p ref={cus5Ref}> Transform</p>
+                  <p ref={cus6Ref}> your</p>
+                </p>
+                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2.5">
+                  <p ref={cus2Ref}> vision</p>
+                  <p ref={cus4Ref}> into</p> <p ref={cus3Ref}> reality!</p>
+                </p>
               </h1>
             </div>
             <div className="lg:w-2/3 w-full text-left lg:text-right mt-4 lg:mt-0">
-              <h4 ref={cus7Ref} className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">Pushing the boundaries of what's possible, driven by a passion for discovery and excellence.</h4>
+              <h4 ref={cus7Ref} className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">
+                Pushing the boundaries of what's possible, driven by a passion for discovery and excellence.
+              </h4>
             </div>
           </div>
 
@@ -454,7 +470,7 @@ export default function Home() {
               </div>
               <div />
               <div className="lg:justify-end">
-                <a href='/project' onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="px-8 py-3 text-white rounded-full bg-black text-[16px] font-semibold hover:shadow-xl border-[1px] hover:bg-white hover:border-[1px] hover:border-gray-400 hover:text-black">
+                <a href="/project" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="px-8 py-3 text-white rounded-full bg-black text-[16px] font-semibold hover:shadow-xl border-[1px] hover:bg-white hover:border-[1px] hover:border-gray-400 hover:text-black">
                   Start a project with us
                 </a>
               </div>
@@ -472,7 +488,7 @@ export default function Home() {
                     <h1 className="text-[#141414] text-[24px] font-semibold">OUR STORY</h1>
                   </div>
                   <div>
-                    <a href='/about-us' onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex p-6 flex-col justify-center items-center gap-[10px] rounded-[50px] bg-[#141414] transition transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl  ">
+                    <a href="/about-us" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex p-6 flex-col justify-center items-center gap-[10px] rounded-[50px] bg-[#141414] transition transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl  ">
                       <ArrowIcon className="w-[16px] h-[12px] flex-shrink-0" />
                     </a>
                   </div>
@@ -499,7 +515,7 @@ export default function Home() {
                 <LockIcon className="w-[80px] h-[60px] sm:w-[100px] sm:h-[70px] md:w-[127px] md:h-[90px] fill-[#141414] flip" />
                 <p>your design</p>
               </div>
-              <p>potential with our studio’s expertise</p>
+              <p>potential with our studio’s expertise </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -518,16 +534,17 @@ export default function Home() {
           <div className="flex px-8 flex-col space-y-8 ">
             <div className="flex lg:justify-between lg:flex-row gap-8 flex-col item-center">
               <h1 className="text-[#141414] text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-semibold">Our Expertise</h1>
-
             </div>
 
             <div ref={cus11Ref} className="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
-              {cardData3.map((card, index) => (
-                <div key={index} className="flex flex-col justify-center items-center gap-6 p-8 sm:p-8 rounded-[36px] border-[2px]">
+              {cardData3.map((card, cardIndex) => (
+                <div key={cardIndex} className="flex flex-col justify-center items-center gap-6 p-8 sm:p-8 rounded-[36px] border-[2px]">
                   <h4 className="text-[#000] text-center text-[18px] sm:text-[24px] md:text-[24px] lg:text-[28px] font-semibold">{card.title}</h4>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {card.icons.map((icon, idx) => (
-                      <img key={idx} className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] p-[4px] sm:p-[6px] flex justify-center items-center rounded-[10px] bg-[#F0F0F0]" src={icon} alt="" />
+                  <div className="flex flex-wrap gap-[12px]  p-2 rounded-[12px] justify-center">
+                    {card.icons.map((icon, iconIndex) => (
+                      <div key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
+                        <Lottie options={icon}  />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -542,9 +559,11 @@ export default function Home() {
                 <LoadingIcon className=" w-[32px] h-[32px]" />
                 <h4 className="text-[#fff] text-[20px] font-medium">Next about you</h4>
               </div>
-                <h1 className="text-[#fff] text-[74px] font-bold leading-tight">Unforgettable mark on your digital presence</h1 >
+              <h1 className="text-[#fff] text-[74px] font-bold leading-tight">Unforgettable mark on your digital presence</h1>
               <div className="flex flex-col space-y-[48px]">
-                <h3 className="text-[#fff] text-[20px] font-medium">Pushing the boundaries of what's possible, driven by a passion <br></br>for discovery and excellence.</h3>
+                <h3 className="text-[#fff] text-[20px] font-medium">
+                  Pushing the boundaries of what's possible, driven by a passion <br></br>for discovery and excellence.
+                </h3>
                 <div className="flex flex-wrap gap-3 ">
                   <div>
                     <button onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="py-2 px-4  justify-end items-end gap-[8px]  rounded-[100px] bg-[#ffffff] text-center text-[14px] font-semibold text-[#5E5E5E] shadow-xl">
@@ -595,29 +614,23 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col space-y-4 w-full md:w-1/2">
-            {faqs.map((faq, index) => (
-              <div ref={faq.ref} key={index} className='flex flex-col'>
-                <div
-                onMouseEnter={handleMouseEnterContact}
-                onMouseLeave={handleMouseLeaveContact}
-                  className='flex justify-between px-4 py-2 flex-col items-center rounded-[24px] border-[2px] cursor-pointer'
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <span className='flex pl-4  justify-between w-full items-center'>
-                  <h6 className='text-[#4A4A4A] text-[24px] font-medium '>{faq.question}</h6>
-                  <h6 className='text-[#4A4A4A] text-[24px] md:text-[44px] font-medium'>{openIndex === index ? '-' : '+'}</h6>
-                  </span>
-                  <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
-                    <div className="pl-4 pb-4">
-                      <hr />
-                      <br />
-                      <p className="text-[20px] text-[#4A4A4A]">{faq.answer}</p>
+              {faqs.map((faq, index) => (
+                <div ref={faq.ref} key={index} className="flex flex-col">
+                  <div onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex justify-between px-4 py-2 flex-col items-center rounded-[24px] border-[2px] cursor-pointer" onClick={() => toggleAccordion(index)}>
+                    <span className="flex pl-4  justify-between w-full items-center">
+                      <h6 className="text-[#4A4A4A] text-[24px] font-medium ">{faq.question}</h6>
+                      <h6 className="text-[#4A4A4A] text-[24px] md:text-[44px] font-medium">{openIndex === index ? '-' : '+'}</h6>
+                    </span>
+                    <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
+                      <div className="pl-4 pb-4">
+                        <hr />
+                        <br />
+                        <p className="text-[20px] text-[#4A4A4A]">{faq.answer}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              
-              </div>
-            ))}
+              ))}
             </div>
           </div>
 
