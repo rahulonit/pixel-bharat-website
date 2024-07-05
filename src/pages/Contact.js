@@ -452,8 +452,7 @@ export default function Contact() {
             <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-5 overflow-hidden "><p ref={cus2Ref}>Become</p><p ref={cus3Ref}>a</p><p ref={cus4Ref}>Client</p></p>
 
             <p ref={cus7Ref} className='text-[#4A4A4A] text-[16px] lg:text-[20px] font-medium overflow-hidden'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam. Odio euismod lacinia at quis. Urna et pharetra pharetra massa.
-            </p>
+            Discover how we can make a difference for your business. Fill out the form below to get started, and one of our representatives will be in touch with you shortly. Let's collaborate and achieve great things together.            </p>
           </div>
 
           <div className="">
