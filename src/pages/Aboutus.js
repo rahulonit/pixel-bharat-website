@@ -520,10 +520,10 @@ export default function Aboutus() {
           </div>
 
           {/* latest works section */}
-          <div className="flex flex-col space-y-8 pl-8 box-border">
+          <div className="flex flex-col space-y-8 px-8 box-border">
             <h5 className="text-[#141414]  text-[40px] font-semibold">Our Gallery!</h5>
 
-            <div ref={mainimgRef} className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 -mr-8 ">
+            <div ref={mainimgRef} className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8  ">
               {images.map((image, index) => (
                 <div key={index} ref={image?.ref} className="rounded-[36px] w-full overflow-hidden">
                   <img ref={image?.ref2} className="h-[300px] w-full object-cover rounded-[36px]" src={image.src} alt={image.alt} />
