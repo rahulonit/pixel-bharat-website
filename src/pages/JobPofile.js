@@ -23,7 +23,7 @@ export default function JobProfile() {
 
   // Function to fetch job data from API
   const fetchJobData = async () => {
-console.log('fetchJobData');
+// console.log('fetchJobData');
     try {
       console.log(id);
       const response = await fetch(`${config.apiUrl}api/projects/${id}`); // adjust API endpoint as per your server setup
