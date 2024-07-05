@@ -542,7 +542,7 @@ export default function Home() {
                 <LoadingIcon className=" w-[32px] h-[32px]" />
                 <h4 className="text-[#fff] text-[20px] font-medium">Next about you</h4>
               </div>
-                <h1 className="text-[#fff] text-[74px] font-bold leading-100">Unforgettable mark on your digital presence</h1 >
+                <h1 className="text-[#fff] text-[74px] font-bold leading-tight">Unforgettable mark on your digital presence</h1 >
               <div className="flex flex-col space-y-[48px]">
                 <h3 className="text-[#fff] text-[20px] font-medium">Pushing the boundaries of what's possible, driven by a passion <br></br>for discovery and excellence.</h3>
                 <div className="flex flex-wrap gap-3 ">
