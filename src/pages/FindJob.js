@@ -14,7 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(useGSAP);
 
-export default function FindJob() {
+export default function FindJob({isOpen}) {
   const [isVisible, setIsVisible] = useState(false);
   const [jobProfile, setJobProfile] = useState('');
   const [location, setLocation] = useState('');
@@ -460,7 +460,8 @@ export default function FindJob() {
         </div>
       </div>
 
-      <Collaborate />
+      <Collaborate isOpen={isOpen}/>
+
       <Footer />
     </div>
   );

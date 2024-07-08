@@ -19,7 +19,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(useGSAP);
 
-export default function Team() {
+export default function Team({isOpen}) {
   const [isVisible, setIsVisible] = useState(false);
   const [teammates, setTeammates] = useState([]);
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -480,7 +480,7 @@ export default function Team() {
               </div>
               <br></br>
 
-              <Carousel />
+              <Carousel isOpen={isOpen}/>
             </div>
           </div>
 

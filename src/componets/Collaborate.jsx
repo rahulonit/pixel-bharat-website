@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(useGSAP);
 
-const VideoBackground = ({ handleCollabPopupOpen}) => {
+const VideoBackground = ({isOpen,onClose}) => {
 
   const video = require('../assets/vedio.mp4'); // Ensure correct path and naming
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -19,7 +19,6 @@ const VideoBackground = ({ handleCollabPopupOpen}) => {
   const cus1Ref = useRef(null)
   const cus2Ref = useRef(null)
   const cus3Ref = useRef(null)
-
   const handleMouseEnterContact = () => {
     setIsHoveringContact(true);
     const dotElement = document.getElementById('dot');
@@ -75,11 +74,11 @@ const VideoBackground = ({ handleCollabPopupOpen}) => {
         ></div>
         {/* Text content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-[#141414]">
-          <h1 className="text-[#141414] text-[36px] sm:text-[48px] text-center md:text-[56px] lg:text-[64px] font-bold">Let's collaborate</h1>
+          <h1 className="text-[#141414] text-[36px] sm:text-[48px] text-center md:text-[56px] lg:text-[64px] font-bold">Let's Collaborate</h1>
           {/* Button */}
           <button  className='py-3 px-8 rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black'
           onMouseEnter={handleMouseEnterContact}
-          onClick={handleCollabPopupOpen} 
+          onClick={isOpen} 
           onMouseLeave={handleMouseLeaveContact}>
             Start Now!
           </button>

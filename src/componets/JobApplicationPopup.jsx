@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import config from "../config";
-import frame from '../assets/logo.svg';
-
+import frame from "../assets/logo.svg";
 import Upload from "../assets/logo.svg";
 
 const JobApplicationPopup = ({ jobTitle, applicationId, onClose }) => {
@@ -47,8 +46,8 @@ const JobApplicationPopup = ({ jobTitle, applicationId, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
-      <div className=" rounded-lg  p-4 w-full max-w-4xl relative">
+    <div  onClick={onClose} className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
+      <div onClick={(e) => e.stopPropagation()} className=" rounded-lg  p-4 w-full max-w-4xl relative">
         <form onSubmit={handleFormSubmit} className="space-y-4">
           <div className="flex flex-col lg:flex-row items-start gap-8 relative w-full">
             {/* Image Section */}
@@ -75,12 +74,12 @@ const JobApplicationPopup = ({ jobTitle, applicationId, onClose }) => {
                 <div className="relative flex-1 mt-[-1.00px] font-semibold text-black text-base leading-[25.6px]">
                   Employee Recruitment
                 </div>
-                <button
+                {/* <button
                   onClick={onClose}
                   className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
                 >
                   &times;
-                </button>
+                </button> */}
               </div>
               <div className="items-start gap-6 px-5 py-0 self-stretch w-full flex flex-col relative">
                 <input

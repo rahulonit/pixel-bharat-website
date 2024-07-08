@@ -12,7 +12,7 @@ import WorkIcon4 from '../assets/work-icon4.svg';
 
 import { serviceData } from '../data/serviceData';
 
-export default function Service() {
+export default function Service({isOpen}) {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(true);
@@ -343,7 +343,7 @@ export default function Service() {
           </div>
         </div>
 
-        <Collaborate />
+        <Collaborate isOpen={isOpen}/>
         <Footer />
       </div>
     </div>

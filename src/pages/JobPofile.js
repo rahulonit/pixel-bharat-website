@@ -9,7 +9,7 @@ import JobApplicationPopup from '../componets/JobApplicationPopup'; // import th
 import config from '../config';
 import CollabPopup from '../componets/Collabpopup';
 
-export default function JobProfile() {
+export default function JobProfile({isOpen}) {
   const [isHoveringContact, setIsHoveringContact] = useState(false);
   const [isCollabPopupOpen, setIsCollabPopupOpen] = useState(false); // state to manage popup visibility
 
@@ -175,14 +175,12 @@ export default function JobProfile() {
           </div>
         </div>
       </div>
-      <Collaborate />
+      <Collaborate isOpen={isOpen}/>
       <Footer />
       {isPopupOpen && (
         <JobApplicationPopup jobTitle={job.title} onClose={handlePopupClose} />
       )}
-      {isPopupOpen && (
-        <CollabPopup handleCollabPopupOpen={ handleCollabPopupOpen}  onClose={handlePopupClose} />
-      )}
+  
     </div>
   );
 }

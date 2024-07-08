@@ -18,7 +18,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
-export default function Career() {
+export default function Career({isOpen}) {
   const [isHoveringContact, setIsHoveringContact] = useState(false);
 
   const handleMouseEnterContact = () => {
@@ -484,7 +484,8 @@ export default function Career() {
         </div>
       </div>
 
-      <Collaborate />
+      <Collaborate isOpen={isOpen}/>
+
       <Footer />
     </div>
   );

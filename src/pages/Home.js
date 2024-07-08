@@ -129,7 +129,7 @@ const clients = [
   // Add more client objects here
 ];
 
-export default function Home() {
+export default function Home({isOpen}) {
   const [isVisible, setIsVisible] = useState(false);
 
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -875,7 +875,8 @@ export default function Home() {
           </Marquee>
         </div>
 
-        <Collaborate />
+       <Collaborate isOpen={isOpen}/>
+
       </div>
       <Footer />
     </div>

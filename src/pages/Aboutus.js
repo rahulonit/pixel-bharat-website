@@ -21,12 +21,12 @@ const images = [
   { src: image2, alt: 'Image 2' },
   { src: image3, alt: 'Image 3' },
   { src: image4, alt: 'Image 4' },
-  { src: image1, alt: 'Image 5' },
+  { src: image1, alt: 'Imwage 5' },
   { src: image2, alt: 'Image 6' },
   { src: image3, alt: 'Image 7' }
 ];
 
-export default function Aboutus() {
+export default function Aboutus({isOpen}) {
   const [isHoveringContact, setIsHoveringContact] = useState(false);
 
   const handleMouseEnterContact = () => {
@@ -533,7 +533,8 @@ export default function Aboutus() {
           </div>
         </div>
 
-        <Collaborate />
+           
+      <Collaborate isOpen={isOpen}/>
         <div className="w-full flex flex-col  pb-8 space-y-20">
         <Footer />
         </div>

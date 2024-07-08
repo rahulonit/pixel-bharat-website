@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import Header from '../componets/Header';
 import Footer from '../componets/Footer';
-import Collab from '../componets/Collaborate';
+import Collaborate from '../componets/Collaborate';
 import { ReactComponent as HandIcon } from '../assets/Hand-logo.svg';
 import emailjs from 'emailjs-com';
 import gsap from 'gsap';
@@ -12,7 +12,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
-export default function Contact() {
+export default function Contact({isOpen}) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -78,9 +78,9 @@ export default function Contact() {
     };
 
     // Replace with your EmailJS service ID, template ID, and user ID
-    const serviceId = 'your_emailjs_service_id';
-    const templateId = 'your_emailjs_template_id';
-    const userId = 'your_emailjs_user_id';
+    const serviceId = 'service_o5ctvxj';
+    const templateId = 'template_i3kleqr';
+    const userId = 'teQKdcKGDcXTxWc0P';
 
     // Send email using EmailJS
     emailjs
@@ -518,7 +518,8 @@ export default function Contact() {
             ))}
           </div>
         </div>
-        <Collab />
+        <Collaborate isOpen={isOpen}/>
+
         <Footer />
       </div>
     </div>

@@ -76,7 +76,7 @@ function Cards({ selectedFilter }) {
     </div>
   );
 }
-export default function Project() {
+export default function Project({isOpen}) {
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [isVisible, setIsVisible] = useState(false);
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -492,7 +492,7 @@ export default function Project() {
             <Cards selectedFilter={selectedFilter} />
           </>
         )}
-        <Collaborate />
+          <Collaborate isOpen={isOpen}/>
         <Footer />
       </div>
     </div>
