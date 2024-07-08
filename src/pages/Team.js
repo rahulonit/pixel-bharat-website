@@ -6,7 +6,6 @@ import Footer from '../componets/Footer';
 import Collaborate from '../componets/Collaborate';
 import Carousel from '../componets/Carousel';
 import ProfilePic from '../assets/profile.png';
-import defaultimg from '../assets/default_img.png'
 import config from '../config';
 import { ReactComponent as FacebookIcon } from '../assets/Team/facebook-icon-Team.svg';
 import { ReactComponent as InstagramIcon } from '../assets/Team/instagram-icon-Team.svg';

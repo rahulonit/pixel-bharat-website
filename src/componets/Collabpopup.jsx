@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import config from '../config';
-import frame from '../assets/frame.png';
-import Upload from '../assets/logo.svg';
+import frame from '../assets/logo.svg';
 
 const CollabPopup = ({ jobTitle, applicationId, onClose }) => {
   const [name, setName] = useState('');

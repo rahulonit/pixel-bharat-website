@@ -53,7 +53,7 @@ export default function Contact() {
         const data = response.data;
         setLocation(data);
         setIsIndia(data.country === 'IN');
-        alert(`Location: ${data.city}, ${data.region}, ${data.country_name}`);
+        // alert(`Location: ${data.city}, ${data.region}, ${data.country_name}`);
       } catch (error) {
         console.error('Error fetching location:', error);
       }

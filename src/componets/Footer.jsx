@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../assets/logo.svg';
+import { ReactComponent as Logo } from '../assets/icon.svg';
 import { ReactComponent as FileIcon } from '../assets/file.svg';
 
 export default function Footer() {

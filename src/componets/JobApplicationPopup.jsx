@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import config from "../config";
-import frame from "../assets/frame.png";
+import frame from '../assets/logo.svg';
+
 import Upload from "../assets/logo.svg";
 
 const JobApplicationPopup = ({ jobTitle, applicationId, onClose }) => {
