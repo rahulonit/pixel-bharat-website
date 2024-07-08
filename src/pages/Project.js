@@ -65,7 +65,7 @@ function Cards({ selectedFilter }) {
         <div className="w-full overflow-hidden flex flex-col gap-4" key={item.id}>
           <div className="rounded-[24px] relative overflow-hidden">
             <img src={item.image} alt="" className="w-full h-full object-cover rounded-[24px]" />
-            <h1 className="inline-flex absolute font-bold top-0 right-0 w-fit lg:p-[16px] p-[4px] m-4 text-[10px] justify-center items-start gap-[8px] rounded-[100px] bg-[var(--Default-White,_#FFF)]">{item.category}</h1>
+            <h1 className="inline-flex absolute font-medium top-0 right-0 w-fit lg:py-[8px] lg:px-[24px] p-2   m-4 text-[16px] justify-center items-start gap-[8px] rounded-[100px] bg-[var(--Default-White,_#FFF)]">{item.category}</h1>
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="font-bold text-xl mb-2">{item.title}</h1>

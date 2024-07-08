@@ -746,7 +746,7 @@ export default function Home() {
 
           {/* next about section */}
           <div ref={cus12Ref} className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#000] overflow-hidden" style={{ minHeight: '510px' }}>
-            <div className="flex flex-col justify-between w-full overflow-hidden">
+            <div className="flex flex-col justify-between lg:w-[50%] overflow-hidden">
               <div className="flex space-x-3 items-center overflow-hidden">
                 <LoadingIcon className=" w-[32px] h-[32px]" />
                 <h4 className="text-[#fff] text-[20px] font-medium">Next about you</h4>
@@ -776,7 +776,7 @@ export default function Home() {
                   </p>
                 </div>
               </h1>
-              <div className="flex flex-col space-y-[48px]">
+              <div className="flex flex-col  space-y-[48px]">
                 <h3 className="text-[#fff] text-[20px] font-medium">
                   Pushing the boundaries of what's possible, driven by a passion <br></br>for discovery and excellence.
                 </h3>
@@ -804,11 +804,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <img src={laptop} alt="" />
+            <img src={laptop} className='lg:w-[50%]' alt="" />
           </div>
 
-          {/* recent works section */}
+          {/* recent works section */}  
           <div ref={cus13Ref} className="flex flex-col space-y-10">
             <h2 className="text-[#ABABAB] px-8 text-[20px] font-medium">RECENT WORKS</h2>
             <div className="flex px-8 lg:items-center  justify-between lg:flex-row flex-col gap-8">

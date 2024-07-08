@@ -26,7 +26,7 @@ export default function JobProfile() {
 // console.log('fetchJobData');
     try {
       console.log(id);
-      const response = await fetch(`${config.apiUrl}api/projects/${id}`); // adjust API endpoint as per your server setup
+      const response = await fetch(`${config.apiUrl}api/careers/${id}`); // adjust API endpoint as per your server setup
       if (!response.ok) {
         throw new Error('Failed to fetch job data');
       }
@@ -70,21 +70,21 @@ export default function JobProfile() {
     <div className={`page ${isVisible ? 'slide-in' : ''}`}>
       <Header />
       <div className="w-full flex flex-col py-10 space-y-20">
-        <div className="flex flex-col gap-4 px-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-4 px-8">
           <h1 className="text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold">{job.title}</h1>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col  gap-2">
             <div className="flex flex-row gap-4 items-center">
               <Location className="w-[22px] h-[33px]" />
               <h5 className="text-[#4A4A4A] text-[24px] font-semibold">{job.location}</h5>
             </div>
             <div className="flex flex-row gap-4 items-center">
               <People className="w-[22px] h-[33px]" />
-              <h5 className="text-[#4A4A4A] text-[24px] font-semibold">{job.service}</h5>
+              <h5 className="text-[#4A4A4A] text-[24px] font-semibold">{job.positions} open position</h5>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col min-h-[510px] justify-between p-[64px] mx-8 bg-[#F6F6F6] gap-8 rounded-[36px]">
+        <div className="flex flex-col min-h-[510px] justify-between p-[30px] lg:p-[64px] mx-8 bg-[#F6F6F6] gap-8 rounded-[36px]">
           <div className='flex flex-col gap-2'>
             <h1 className='self-stretch text-[24px] font-semibold'>About Us</h1>
             <p className='self-stretch text-[#4A4A4A] text-[16px]'>{job.about}</p>
