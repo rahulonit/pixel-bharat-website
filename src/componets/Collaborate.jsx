@@ -5,14 +5,12 @@ import { useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CollabPopup from './Collabpopup';
 
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(useGSAP);
 
-const VideoBackground = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // state to manage popup visibility
+const VideoBackground = ({ handleCollabPopupOpen}) => {
 
   const video = require('../assets/vedio.mp4'); // Ensure correct path and naming
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -30,6 +28,8 @@ const VideoBackground = () => {
     }
   };
 
+
+
   const handleMouseLeaveContact = () => {
     setIsHoveringContact(false);
     const dotElement = document.getElementById('dot');
@@ -37,13 +37,7 @@ const VideoBackground = () => {
       dotElement.classList.remove('remove');
     }
   };
-  const handlePopupOpen = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handlePopupClose = () => {
-    setIsPopupOpen(false);
-  };
+ 
   useGSAP(() => {
     const texthead = textheadRef.current
     const cus1 = cus1Ref.current
@@ -85,15 +79,13 @@ const VideoBackground = () => {
           {/* Button */}
           <button  className='py-3 px-8 rounded-[100px] bg-black text-white text-[16px] font-semibold hover:shadow-xl border-[1px] border-black hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black'
           onMouseEnter={handleMouseEnterContact}
-          onClick={handlePopupOpen} 
+          onClick={handleCollabPopupOpen} 
           onMouseLeave={handleMouseLeaveContact}>
             Start Now!
           </button>
         </div>
       </div>
-      {isPopupOpen && (
-        <CollabPopup  onClose={handlePopupClose} />
-      )}
+      
     </div>
   );
 };

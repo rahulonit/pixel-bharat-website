@@ -7,9 +7,12 @@ import Footer from '../componets/Footer';
 import Collaborate from '../componets/Collaborate';
 import JobApplicationPopup from '../componets/JobApplicationPopup'; // import the popup component
 import config from '../config';
+import CollabPopup from '../componets/Collabpopup';
 
 export default function JobProfile() {
   const [isHoveringContact, setIsHoveringContact] = useState(false);
+  const [isCollabPopupOpen, setIsCollabPopupOpen] = useState(false); // state to manage popup visibility
+
   const [isPopupOpen, setIsPopupOpen] = useState(false); // state to manage popup visibility
   const [isVisible, setIsVisible] = useState(false);
   const [job, setJob] = useState(null); // state to hold job details
@@ -60,6 +63,14 @@ export default function JobProfile() {
 
   const handlePopupClose = () => {
     setIsPopupOpen(false);
+  };
+
+  const handleCollabPopupOpen = () => {
+    setIsCollabPopupOpen(true);
+  };
+
+  const handleCollabPopupClose = () => {
+    setIsCollabPopupOpen(false);
   };
 
   if (!job) {
@@ -168,6 +179,9 @@ export default function JobProfile() {
       <Footer />
       {isPopupOpen && (
         <JobApplicationPopup jobTitle={job.title} onClose={handlePopupClose} />
+      )}
+      {isPopupOpen && (
+        <CollabPopup handleCollabPopupOpen={ handleCollabPopupOpen}  onClose={handlePopupClose} />
       )}
     </div>
   );

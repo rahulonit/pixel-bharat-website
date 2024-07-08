@@ -44,7 +44,7 @@ const CollabPopup = ({ jobTitle, applicationId, onClose }) => {
   };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
       <div className="rounded-lg p-4 w-full max-w-4xl min-h-screen flex items-center justify-center">
         <form onSubmit={handleFormSubmit} className="flex items-center justify-center w-full">
           <div className="w-full lg:w-[488px] items-center gap-8 bg-white rounded-3xl overflow-hidden flex flex-col relative">
