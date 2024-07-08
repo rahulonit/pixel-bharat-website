@@ -446,10 +446,10 @@ export default function Contact() {
       <div className='blur-section'>
 
         <div className='py-10 px-8'>
-          <div className='w-full lg:w-1/2 flex flex-col space-y-3 pb-8 pl-8 overflow-hidden'>
+          <div className='w-full lg:w-1/2 flex flex-col space-y-3 pb-8  overflow-hidden'>
             <HandIcon className='w-16 h-16 pb-8' />
 
-            <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-5 overflow-hidden "><p ref={cus2Ref}>Become</p><p ref={cus3Ref}>a</p><p ref={cus4Ref}>Client</p></p>
+            <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden flex-wrap "><p ref={cus2Ref}>Become</p><p ref={cus3Ref}>a</p><p ref={cus4Ref}>Client</p></p>
 
             <p ref={cus7Ref} className='text-[#4A4A4A] text-[16px] lg:text-[20px] font-medium overflow-hidden'>
             Discover how we can make a difference for your business. Fill out the form below to get started, and one of our representatives will be in touch with you shortly. Let's collaborate and achieve great things together.            </p>
@@ -457,7 +457,7 @@ export default function Contact() {
 
           <div className="">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row items-center space-y-3 lg:space-y-0 lg:space-x-3 pl-8">
+              <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row items-center space-y-3 lg:space-y-0 lg:space-x-3 ">
                 <div className="w-full lg:w-1/4">
                   <input
                     type="text"

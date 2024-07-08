@@ -386,10 +386,10 @@ export default function Team() {
     <div className={`page ${isVisible ? 'slide-in' : ''}`}>
       <Header />
       <div className="blur-section">
-        <div className="w-full flex flex-col pt-10 space-y-20">
+        <div className="w-full flex flex-col pt-10 lg:space-y-20 space-y-10">
           {/* main heading */}
 
-          <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-5 overflow-hidden pl-8"><p ref={cus2Ref}>From</p><p ref={cus3Ref}> the</p><p ref={cus4Ref}>start</p> <p ref={cus5Ref}>we</p><p ref={cus6Ref}> sought</p></p>
+          <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden px-8 flex-wrap"><p ref={cus2Ref}>From</p><p ref={cus3Ref}> the</p><p ref={cus4Ref}>start</p> <p ref={cus5Ref}>we</p><p ref={cus6Ref}> sought</p></p>
 
           {/* poster */}
           <div  className="w-full h-1/2 px-8 rounded-[30px]">

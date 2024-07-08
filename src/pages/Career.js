@@ -441,15 +441,14 @@ export default function Career() {
       <div className="w-full flex flex-col  py-10 space-y-20">
         {/* heading section */}
         <div className="w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8">
-          <div className="w-full">
-            <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-5 overflow-hidden pl-8">
+        <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden  flex-wrap">
+
               <p ref={cus2Ref}>Careers</p>
-            </p>
-            <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold flex gap-5 overflow-hidden pl-8">
+            
               <p ref={cus3Ref}>with</p>
               <p ref={cus4Ref}>Pixel</p> <p ref={cus5Ref}>Bharat</p>
-            </p>
-          </div>
+           
+          </p>
           <div ref={cus7Ref} className="lg:w-2/3 w-full text-left lg:text-right mt-4 lg:mt-0">
             <h4 className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">Join a team where collaboration and creativity thrive.</h4>
           </div>

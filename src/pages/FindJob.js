@@ -348,7 +348,7 @@ export default function FindJob() {
         <div className='flex lg:justify-between px-8 lg:flex-row flex-col gap-4'>
           <h1 className='text-[#141414] text-[24px] font-semibold'>Let’s Build something great, together</h1>
 
-          <div className='flex gap-4'>
+          <div className='flex lg:flex-row flex-col gap-4'>
             <div className='relative' ref={profileRef}>
               <input
                 type="text"

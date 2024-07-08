@@ -102,7 +102,7 @@ const cardData3 = [
   },
   {
     title: 'Development Using',
-    icons: [photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions],
+    icons: [photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions]
   }
 ];
 
@@ -204,6 +204,21 @@ export default function Home() {
   const faq3Ref = useRef(null);
   const faq4Ref = useRef(null);
   const faq5Ref = useRef(null);
+  const un1Ref = useRef(null);
+  const un2Ref = useRef(null);
+  const un3Ref = useRef(null);
+  const un4Ref = useRef(null);
+  const un5Ref = useRef(null);
+  const un6Ref = useRef(null);
+  const un7Ref = useRef(null);
+  const un8Ref = useRef(null);
+  const un9Ref = useRef(null);
+  const on1Ref = useRef(null);
+  const on2Ref = useRef(null);
+  const on3Ref = useRef(null);
+  const on4Ref = useRef(null);
+  const on5Ref = useRef(null);
+  const on6Ref = useRef(null);
 
   useGSAP(() => {
     const texthead = textheadRef.current;
@@ -227,6 +242,21 @@ export default function Home() {
     const faq3 = faq3Ref.current;
     const faq4 = faq4Ref.current;
     const faq5 = faq5Ref.current;
+    const un1 = un1Ref.current;
+    const un2 = un2Ref.current;
+    const un3 = un3Ref.current;
+    const un4 = un4Ref.current;
+    const un5 = un5Ref.current;
+    const un6 = un6Ref.current;
+    const un7 = un7Ref.current;
+    const un8 = un8Ref.current;
+    const un9 = un9Ref.current;
+    const on1 = on1Ref.current;
+    const on2 = on2Ref.current;
+    const on3 = on3Ref.current;
+    const on4 = on4Ref.current;
+    const on5 = on5Ref.current;
+    const on6 = on6Ref.current;
     gsap.from(texthead, {
       x: -400,
       opacity: 0,
@@ -246,7 +276,6 @@ export default function Home() {
     });
     gsap.from(cus2, {
       yPercent: 350,
-
       duration: 1.6,
       smooth: 1
     });
@@ -299,10 +328,10 @@ export default function Home() {
     });
 
     gsap.from(cus10, {
-      y: 150,
-      opacity: 0,
-      duration: 1.8,
-      smooth: 1,
+      // y: 150,
+      // opacity: 0,
+      // duration: 1.8,
+      // smooth: 1,
       scrollTrigger: {
         trigger: cus10,
 
@@ -414,6 +443,157 @@ export default function Home() {
         start: 'top 100%'
       }
     });
+
+    gsap.from(un1, {
+      yPercent: 350,
+      duration: 1.1,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 120%'
+      }
+    });
+    gsap.from(un2, {
+      yPercent: 350,
+      duration: 1.3,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un3, {
+      yPercent: 350,
+      duration: 1.5,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un4, {
+      yPercent: 350,
+      duration: 1.7,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un5, {
+      yPercent: 350,
+      duration: 1.9,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un6, {
+      yPercent: 350,
+      duration: 2.1,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un7, {
+      yPercent: 350,
+      duration: 2.3,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un8, {
+      yPercent: 350,
+      duration: 2.5,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(un9, {
+      yPercent: 350,
+      duration: 2.7,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus10,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(on1, {
+      yPercent: 350,
+      duration: 1.5,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(on2, {
+      yPercent: 400,
+      duration: 1.8,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(on3, {
+      yPercent: 350,
+      duration: 1.9,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(on4, {
+      yPercent: 400,
+      duration: 2.1,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(on5, {
+      yPercent: 400,
+      duration: 2.3,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
+    gsap.from(on6, {
+      yPercent: 400,
+      duration: 2.5,
+      smooth: 1,
+      scrollTrigger: {
+        trigger: cus12,
+        markers: false,
+        start: 'top 100%'
+      }
+    });
   });
   const faqs = [
     { question: 'What services does Pixel Bharat offer?', answer: 'Pixel Bharat offers a range of services including Social Media Marketing, UX/UI Design, and Development. Our goal is to enhance your brand’s online presence and provide robust, scalable, and efficient solutions to drive your business forward.', ref: faq1Ref },
@@ -451,7 +631,7 @@ export default function Home() {
           </div>
 
           {/* projects section */}
-          <div className="flex px-8 flex-col space-y-8">
+          <div className="flex px-8 flex-col space-y-6 lg:space-y-8">
             <h2 className="text-[#ABABAB] text-[20px] font-medium">Services</h2>
 
             <div className="lg:flex lg:space-x-8 justify-evenly lg:space-y-0 py-8 space-y-8">
@@ -495,10 +675,10 @@ export default function Home() {
                 </div>
                 <div className="lg:flex justify-between space-y-4 lg:space-y-0">
                   <div className="flex items-end">
-                    <h3 className="flex-[1_0_0] text-[#4A4A4A] text-[20px] font-bold lg:flex-1">Experience the Power of Collaboration and Excellence!</h3>
+                    <h3 className="flex-[1_0_0]  text-[#4A4A4A] text-[20px] font-bold lg:flex-1">Experience the Power of Collaboration and Excellence!</h3>
                   </div>
                   <div className="lg:w-1/2 flex items-right ">
-                    <p className="flex-[1_0_0] text-[#4A4A4A] text-[16px] font-medium lg:flex-1">At Pixel Bharat, we believe in the power of collaboration and excellence. Our journey began with a vision to transform creative ideas into digital realities. With a passionate team of experts, we are dedicated to delivering innovative solutions that drive success for our clients. Our commitment to quality and excellence has established us as a trusted partner in the industry. Join us as we continue to push the boundaries of creativity and innovation.</p>
+                    <p className="flex-[1_0_0] jstify text-[#4A4A4A] text-[16px] font-medium lg:flex-1">At Pixel Bharat, we believe in the power of collaboration and excellence. Our journey began with a vision to transform creative ideas into digital realities. With a passionate team of experts, we are dedicated to delivering innovative solutions that drive success for our clients. Our commitment to quality and excellence has established us as a trusted partner in the industry. Join us as we continue to push the boundaries of creativity and innovation.</p>
                   </div>
                 </div>
               </div>
@@ -509,13 +689,25 @@ export default function Home() {
           <div className="flex px-8 flex-col space-y-8 ">
             <h2 className="text-[#ABABAB] text-[20px] font-medium">SKILLS</h2>
 
-            <div ref={cus10Ref} className="text-[#141414] text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold">
-              <div className="flex flex-wrap items-center gap-2">
-                <p>Unlock</p>
-                <LockIcon className="w-[80px] h-[60px] sm:w-[100px] sm:h-[70px] md:w-[127px] md:h-[90px] fill-[#141414] flip" />
-                <p>your design</p>
+            <div className="text-[#141414] text-[36x] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold ">
+              <div ref={cus10Ref} className="flex flex-wrap items-center gap-2 lg:gap-5 overflow-hidden ">
+                <p className="overflow-hidden" ref={un1Ref}>
+                  Unlock
+                </p>
+                <div ref={un2Ref}>
+                  {' '}
+                  <LockIcon className="w-[80px] h-[60px] sm:w-[100px] sm:h-[70px] md:w-[127px] md:h-[90px] fill-[#141414] flip" />
+                </div>
+                <p className="flex gap-5 " ref={un3Ref}>
+                  your <p ref={un4Ref}>design</p>
+                </p>
               </div>
-              <p>potential with our studio’s expertise </p>
+              <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex flex-wrap  gap-2 lg:gap-5 overflow-y-hidden lg:mt-10 lg:marT">
+                <p ref={un5Ref}> potential </p>
+                <p ref={un6Ref}> with</p> <p ref={un7Ref}> our</p>
+                <p ref={un8Ref}>studio's</p>
+                <p ref={un9Ref}>expertise</p>
+              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -531,7 +723,7 @@ export default function Home() {
           </div>
 
           {/* Our expertise section */}
-          <div className="flex px-8 flex-col space-y-8 ">
+          <div className="flex px-8 flex-col space-y-6 lg:space-y-8 ">
             <div className="flex lg:justify-between lg:flex-row gap-8 flex-col item-center">
               <h1 className="text-[#141414] text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-semibold">Our Expertise</h1>
             </div>
@@ -543,7 +735,7 @@ export default function Home() {
                   <div className="flex flex-wrap gap-[12px]  p-2 rounded-[12px] justify-center">
                     {card.icons.map((icon, iconIndex) => (
                       <div key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
-                        <Lottie options={icon}  />
+                        <Lottie options={icon} />
                       </div>
                     ))}
                   </div>
@@ -553,13 +745,37 @@ export default function Home() {
           </div>
 
           {/* next about section */}
-          <div ref={cus12Ref} className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#000]" style={{ minHeight: '510px' }}>
-            <div className="flex flex-col justify-between w-full">
-              <div className="flex space-x-3 items-center">
+          <div ref={cus12Ref} className="lg:flex mx-8 lg:space-y-0 space-y-8 justify-between lg:space-x-4 p-8 rounded-[36px] bg-[#000] overflow-hidden" style={{ minHeight: '510px' }}>
+            <div className="flex flex-col justify-between w-full overflow-hidden">
+              <div className="flex space-x-3 items-center overflow-hidden">
                 <LoadingIcon className=" w-[32px] h-[32px]" />
                 <h4 className="text-[#fff] text-[20px] font-medium">Next about you</h4>
               </div>
-              <h1 className="text-[#fff] text-[74px] font-bold leading-tight">Unforgettable mark on your digital presence</h1>
+              <h1 className="text-[#fff] text-[74px] sm:text-[48px] md:text-[56px] font-bold leading-tight overflow-hidden flex flex-wrap">
+                <div className="flex gap-2 flex-wrap text-[30px] lg:text-[64px] font-resize my-8 ">
+                  <p className="text-[30px] lg:text-[64px]" ref={on1Ref}>
+                    Unforgettable
+                  </p>
+                  <p className="text-[30px] lg:text-[64px]" ref={on2Ref}>
+                    mark
+                  </p>
+                  <p className="text-[30px] lg:text-[64px]" ref={on3Ref}>
+                    {' '}
+                    on
+                  </p>
+                  <p className="text-[30px] lg:text-[64px]" ref={on4Ref}>
+                    your
+                  </p>
+                  <p className="text-[30px] lg:text-[64px]" ref={on5Ref}>
+                    {' '}
+                    digital
+                  </p>
+                  <p className="text-[30px] lg:text-[64px]" ref={on6Ref}>
+                    {' '}
+                    presence
+                  </p>
+                </div>
+              </h1>
               <div className="flex flex-col space-y-[48px]">
                 <h3 className="text-[#fff] text-[20px] font-medium">
                   Pushing the boundaries of what's possible, driven by a passion <br></br>for discovery and excellence.
@@ -596,7 +812,7 @@ export default function Home() {
           <div ref={cus13Ref} className="flex flex-col space-y-10">
             <h2 className="text-[#ABABAB] px-8 text-[20px] font-medium">RECENT WORKS</h2>
             <div className="flex px-8 lg:items-center  justify-between lg:flex-row flex-col gap-8">
-              <p className="text-[#4A4A4A] text-[20px]">Discover our latest projects that showcase our expertise and innovation. From dynamic social media campaigns to cutting-edge UX/UI designs, each project reflects our commitment to excellence and creativity. Explore our portfolio to see how we bring visions to life. </p>
+              <p className="text-[#4A4A4A] jstify text-[20px]">Discover our latest projects that showcase our expertise and innovation. From dynamic social media campaigns to cutting-edge UX/UI designs, each project reflects our commitment to excellence and creativity. Explore our portfolio to see how we bring visions to life. </p>
               <div>
                 <a href="/Portfolio.pdf" target="_blank" rel="noopener noreferrer" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex py-3 px-8 border-[1px] border-gray-400 items-start gap-[8px] rounded-[100px] text-center text-[16px] font-semibold hover:bg-black hover:text-white">
                   Portfolio

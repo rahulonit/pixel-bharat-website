@@ -9,7 +9,13 @@
   height: 120px;
   animation: spin 2s linear infinite;
 }
-
+.jstify{
+  text-align: justify;
+}
+.hundred{
+  width: 100px;
+  height: 100px;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -101,7 +107,19 @@ body {
     transform: rotate(360deg);
   }
 }
-
+@media screen and (max-width:490px) {
+  .font-resize{
+    font-size: 36px;
+  }
+}
+@media screen and (max-width:768px) {
+  .font-resize{
+    font-size: 56px;
+  }
+  .marT{
+    margin-top: 2rem;
+  }
+}
 
 
 

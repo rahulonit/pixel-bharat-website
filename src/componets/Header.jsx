@@ -276,8 +276,8 @@ export default function Header() {
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Navbar */}
           <div className="bg-white [box-shadow:0px]">
-            <div className="px-8 py-3">
-              <div className="flex justify-between items-center">
+            <div className="lg:px-8 px-4 py-3">
+              <div className="flex lg:justify-between justify-start items-center">
                 <button
                   className="flex w-[50px] h-[50px] p-[26px] justify-center items-center gap-[10px] border-gray-400 rounded-full border-2 hover:border-black"
                   id="open-sidebar"
@@ -288,17 +288,18 @@ export default function Header() {
                   <MenuIcon className="w-[20px] h-[12px] flex-shrink-0 fill-[#141414]" />
                 </button>
 
-                <div className='lg:pl-16' onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
+                <div className='lg:pl-16 pl-10' onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
                   <Link to={'/'}>
                   <img src= {NewLogo} alt="" /></Link>
                 </div>
 
                 <Link to={'/contact'}>
-                  <button className="flex lg:px-8 px-3 py-3 justify-center items-start gap-[8px] rounded-full bg-black text-[16px] font-semibold leading-[18px] text-white hover:shadow-xl hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black border-[1px] border-black"
-                    onMouseEnter={handleMouseEnterContact}
-                    onMouseLeave={handleMouseLeaveContact}>
-                    Contact us
-                  </button>
+                <button className=" hidden sm:flex lg:px-8 px-3 py-3 justify-center items-start gap-[8px] rounded-full bg-black text-[16px] font-semibold leading-[18px] text-white hover:shadow-xl hover:bg-white hover:border-[1px] hover:border-gray-300 hover:text-black border-[1px] border-black"
+        onMouseEnter={handleMouseEnterContact}
+        onMouseLeave={handleMouseLeaveContact}>
+  Contact us
+</button>
+
                 </Link>
               </div>
             </div>

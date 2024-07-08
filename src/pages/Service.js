@@ -53,11 +53,11 @@ export default function Service() {
     <div className={`page ${isVisible ? 'slide-in' : ''}`}>
       <Header />
       <div className="blur-section">
-        <div className="w-full flex flex-col py-10 space-y-20">
+        <div className="w-full flex flex-col py-10 space-y-10 lg:space-y-20">
           {/* main heading */}
 
           <div className="mx-8 ">
-            <h1 className="pb-10 text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold">{service.title}</h1>
+            <h1 className=" text-[#141414] text-[36px] sm:text-[48px] lg:text-[74px] font-bold">{service.title}</h1>
             {/* <hr /> */}
           </div>
 
@@ -259,8 +259,8 @@ export default function Service() {
 
 
           {/* fifth section */}
-          <div className="bg-black mx-8 p-[64px] text-white rounded-[24px] gap-[64px] flex lg:flex-row flex-col justify-between">
-            <div className="flex flex-row gap-[64px]">
+          <div className="bg-black mx-8 p-[30px] lg:p-[64px] text-white rounded-[24px] gap-[64px] flex lg:flex-row flex-col justify-between">
+            <div className="flex lg:flex-row flex-col gap-[64px]">
               <div className="flex flex-col gap-8 justify-between">
                 <div>
                   <h1 className="text-[#FFF] text-[64px] font-semibold capitalize">{service.revenue}</h1>
@@ -307,33 +307,33 @@ export default function Service() {
               </div>
             </div>
 
-            <div className="flex-1 flex flex-col lg:justify-between md:gap-4 ">
-              <div className="flex flex-row gap-8">
-                <img src={WorkIcon1} alt="" className=" flex p-[30px] justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+            <div className="flex-1 flex flex-col lg:justify-between gap-4 ">
+              <div className="flex  lg:flex-row gap-4 lg:gap-8">
+                <img src={WorkIcon1} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head1}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.discovery}</p>
                 </div>
               </div>
 
-              <div className="flex flex-row gap-8">
-                <img src={WorkIcon2} alt="" className=" flex p-[30px] justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+              <div className="flex  lg:flex-row gap-4 lg:gap-8">
+                <img src={WorkIcon2} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head2}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.strategy}</p>
                 </div>
               </div>
 
-              <div className="flex flex-row gap-8">
-                <img src={WorkIcon3} alt="" className=" flex p-[30px] justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+              <div className="flex  lg:flex-row gap-4 lg:gap-8">
+                <img src={WorkIcon3} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head3}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.execution}</p>
                 </div>
               </div>
 
-              <div className="flex flex-row gap-8">
-                <img src={WorkIcon4} alt="" className=" flex p-[30px] justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+              <div className="flex  lg:flex-row gap-4 lg:gap-8">
+                <img src={WorkIcon4} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head4}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.measurement}</p>
