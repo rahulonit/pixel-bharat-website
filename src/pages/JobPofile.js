@@ -9,7 +9,7 @@ import JobApplicationPopup from '../componets/JobApplicationPopup'; // import th
 import config from '../config';
 import CollabPopup from '../componets/Collabpopup';
 
-export default function JobProfile({isOpen}) {
+export default function JobProfile({ isOpen }) {
   const [isHoveringContact, setIsHoveringContact] = useState(false);
   const [isCollabPopupOpen, setIsCollabPopupOpen] = useState(false); // state to manage popup visibility
 
@@ -20,13 +20,12 @@ export default function JobProfile({isOpen}) {
 
   useEffect(() => {
     setIsVisible(true); // set visibility state
-     fetchJobData(); // fetch job data when component mounts
+    fetchJobData(); // fetch job data when component mounts
   }, []);
-
 
   // Function to fetch job data from API
   const fetchJobData = async () => {
-// console.log('fetchJobData');
+    // console.log('fetchJobData');
     try {
       console.log(id);
       const response = await fetch(`${config.apiUrl}api/careers/${id}`); // adjust API endpoint as per your server setup
@@ -96,37 +95,18 @@ export default function JobProfile({isOpen}) {
         </div>
 
         <div className="flex flex-col min-h-[510px] justify-between p-[30px] lg:p-[64px] mx-8 bg-[#F6F6F6] gap-8 rounded-[36px]">
-          <div className='flex flex-col gap-2'>
-            <h1 className='self-stretch text-[24px] font-semibold'>About Us</h1>
-            <p className='self-stretch text-[#4A4A4A] text-[16px]'>{job.about}</p>
-          </div>
-
-          <div className='flex flex-col gap-2'>
-            <h1 className='self-stretch text-[24px] font-semibold'>Job Description</h1>
-            <p className='self-stretch text-[#4A4A4A] text-[16px]'>{job.description}</p>
-          </div>
-
-          <div className='flex flex-col gap-2'>
-            <h1 className='self-stretch text-[24px] font-semibold'>Key Responsibilities</h1>
-            <p className='self-stretch text-[#4A4A4A] text-[16px]'>{job.keyResponsibilities}</p>
-            <ul className="self-stretch text-[#4A4A4A] text-[16px] list-inside list-disc pl-2">
-              {job.keyResponsibility?.map((responsibility, responsibilityIndex) => (
-                <li key={responsibilityIndex}>{responsibility}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <button
-              onMouseEnter={handleMouseEnterContact}
-              onMouseLeave={handleMouseLeaveContact}
-              onClick={handlePopupOpen} // open the popup on click
-              className='px-8 py-3 text-white rounded-full bg-black text-[16px] font-semibold  hover:shadow-xl border-[1px] hover:bg-white hover:border-[1px] hover:border-gray-400 hover:text-black'>
-              Apply Now!
-            </button>
-          </div>
+        <div dangerouslySetInnerHTML={{ __html: job.content }} />
         </div>
-
+        <div className="px-[30px] ">
+          <button
+            onMouseEnter={handleMouseEnterContact}
+            onMouseLeave={handleMouseLeaveContact}
+            onClick={handlePopupOpen} // open the popup on click
+            className="px-8 py-3 text-white rounded-full bg-black text-[16px] font-semibold  hover:shadow-xl border-[1px] hover:bg-white hover:border-[1px] hover:border-gray-400 hover:text-black"
+          >
+            Apply Now!
+          </button>
+        </div>
         <div className="flex flex-row gap-8 flex-wrap px-8">
           <div className="flex-auto lg:max-w-[calc(33%-16px)] min-h-[400px] rounded-[24px] border-[2px] p-8">
             <h2 className="text-[#000] text-[24px] font-semibold pb-4">Skill Required</h2>
@@ -160,27 +140,24 @@ export default function JobProfile({isOpen}) {
             <div className="flex flex-col gap-4  w-full  rounded-[24px] bg-[#F6F6F6] p-8">
               <h3 className="text-[#ABABAB] text-[20px] font-medium">01</h3>
               <h2 className="text-[#000] text-[24px] font-semibold">Salary</h2>
-              <p className="text-[#4A4A4A] text-[16px] font-bold">{job.salary}</p>
+              <p className="text-[#4A4A4A] text-[16px] font-medium">A full-time position with attractive benefits (company car, full insurances, net allowances, extra holidays)</p>
             </div>
             <div className="flex flex-col gap-4  w-full  rounded-[24px] bg-[#F6F6F6] p-8">
               <h3 className="text-[#ABABAB] text-[20px] font-medium">02</h3>
               <h2 className="text-[#000] text-[24px] font-semibold">Exchange Program</h2>
-              <p className="text-[#4A4A4A] text-[16px] font-bold">{job.exchangeProgram}</p>
+              <p className="text-[#4A4A4A] text-[16px] font-medium">Apply to a similar position in a subsidiary of Odoo.</p>
             </div>
             <div className="flex flex-col gap-4  w-full  rounded-[24px] bg-[#F6F6F6] p-8">
               <h3 className="text-[#ABABAB] text-[20px] font-medium">03</h3>
               <h2 className="text-[#000] text-[24px] font-semibold">Great Work Place</h2>
-              <p className="text-[#4A4A4A] text-[16px] font-bold">{job.greatWorkPlace}</p>
+              <p className="text-[#4A4A4A] text-[16px] font-medium">Babyfoot, Video Games & Ping Pong, Drinks at the Office and Several Team Buildings</p>
             </div>
           </div>
         </div>
       </div>
-      <Collaborate isOpen={isOpen}/>
+      <Collaborate isOpen={isOpen} />
       <Footer />
-      {isPopupOpen && (
-        <JobApplicationPopup jobTitle={job.title} onClose={handlePopupClose} />
-      )}
-  
+      {isPopupOpen && <JobApplicationPopup jobTitle={job.title} onClose={handlePopupClose} />}
     </div>
   );
 }

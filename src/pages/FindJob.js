@@ -424,7 +424,7 @@ export default function FindJob({isOpen}) {
                   <div className="flex flex-col gap-16">
                     <div>
                       <h2 className="text-[#000] text-[24px] font-semibold">{job.title}</h2>
-                      <h4 className="text-[#4A4A4A] text-[16px] font-bold">{job.positions}</h4>
+                      <h4 className="text-[#4A4A4A] text-[16px] font-bold">Open Positions: {job.positions}</h4>
                       <p className="text-[#4A4A4A] text-[16px] font-medium">{job.description}</p>
                     </div>
                     <div className="text-[#4A4A4A] text-[16px]">

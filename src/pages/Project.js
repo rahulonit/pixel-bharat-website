@@ -15,12 +15,12 @@ gsap.registerPlugin(useGSAP);
 
 const buttonLabels = ['All', 'Social Media Management', 'Video Editing', 'eCommerce', 'Mobile App', 'Web Development', 'Graphic Designing', 'UI/UX'];
 const Projectsdata = [];
-
+let isLoading=true;
 const fetchProjectsData = async () => {
   try {
     const response = await fetch(`${config.apiUrl}api/projects`);
     const data = await response.json();
-
+    isLoading=false;
     // Clear existing data
     Projectsdata.length = 0;
 
@@ -61,19 +61,50 @@ function Cards({ selectedFilter }) {
 
   return (
     <div className="grid justify-center gap-8 px-8 py-10 grid-cols-1 lg:grid-cols-3">
-      {filteredProjects.map((item) => (
-        <div className="w-full overflow-hidden flex flex-col gap-4" key={item.id}>
-          <div className="rounded-[24px] relative overflow-hidden">
-            <img src={item.image} alt="" className="w-full h-full object-cover rounded-[24px]" />
-            <h1 className="inline-flex absolute font-medium top-0 right-0 w-fit lg:py-[8px] lg:px-[24px] p-2   m-4 text-[16px] justify-center items-start gap-[8px] rounded-[100px] bg-[var(--Default-White,_#FFF)]">{item.category}</h1>
+      {isLoading ? (
+        <>
+          <div className="w-full bg-gray-200 rounded-lg animate-pulse">
+            <div className="h-56 rounded-lg bg-gray-300"></div>
+            <div className="p-4">
+              <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+              <div className="h-4 bg-gray-300 rounded mt-2"></div>
+              <div className="h-4 bg-gray-300 rounded mt-2 w-1/2"></div>
+            </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="font-bold text-xl mb-2">{item.title}</h1>
-            <p className="text-gray-700 text-base">{truncateDescription(item.description, 30)}</p>
+          <div className="w-full bg-gray-200 rounded-lg animate-pulse">
+            <div className="h-56 rounded-lg bg-gray-300"></div>
+            <div className="p-4">
+              <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+              <div className="h-4 bg-gray-300 rounded mt-2"></div>
+              <div className="h-4 bg-gray-300 rounded mt-2 w-1/2"></div>
+            </div>
           </div>
-        </div>
-      ))}
+          <div className="w-full bg-gray-200 rounded-lg animate-pulse">
+            <div className="h-56 rounded-lg bg-gray-300 mb-5" ></div>
+            <div className="p-4">
+              <div className="h-4 bg-gray-300 rounded w-3/4 "></div>
+              <div className="h-4 bg-gray-300 rounded mt-2"></div>
+              <div className="h-4 bg-gray-300 rounded mt-2 w-1/2"></div>
+            </div>
+          </div>
+        </>
+      ) : (
+       
+        filteredProjects.map(item => (
+          <div className="w-full overflow-hidden flex flex-col gap-4" key={item.id}>
+            <div className="rounded-[24px] relative overflow-hidden">
+              <img src={item.image} alt="" className="w-full h-full object-cover rounded-[24px]" />
+              <h1 className="absolute top-0 right-0 bg-white  p-2 m-4 text-sm rounded-[100px]">{item.category}</h1>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h1 className="font-bold text-xl mb-2">{item.title}</h1>
+              <p className="text-gray-700 text-base">{truncateDescription(item.description, 30)}</p>
+            </div>
+          </div>
+        ))
+      )}
     </div>
+  
   );
 }
 export default function Project({isOpen}) {
@@ -483,16 +514,12 @@ export default function Project({isOpen}) {
           </div>
         </div>
 
-        {isLoading ? (
-          <div className="flex justify-center items-center py-20">
-            <div className="loader"></div> {/* You can style this loader in your CSS */}
-          </div>
-        ) : (
+   
           <>
             <Cards selectedFilter={selectedFilter} />
           </>
-        )}
-          <Collaborate isOpen={isOpen}/>
+        
+         <Collaborate isOpen={isOpen}/>
         <Footer />
       </div>
     </div>
