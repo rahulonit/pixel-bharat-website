@@ -98,11 +98,11 @@ const photoshopOptions = {
 const cardData3 = [
   {
     title: 'Design Tools',
-    icons: [figmaOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions]
+    icons: [FigmaIcon, XDIcon, AeIcon, Diamond, PsIcon, AiIcon, IdIcon, DesignIcon]
   },
   {
     title: 'Development Using',
-    icons: [photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions, photoshopOptions]
+    icons: [JavaIcon, ReactNativeIcon, PhpIcon, SqlIcon, MongoDBicon, HTMLicon, NodeIcon, FlutterIcon]
   }
 ];
 
@@ -734,9 +734,12 @@ export default function Home({isOpen}) {
                   <h4 className="text-[#000] text-center text-[18px] sm:text-[24px] md:text-[24px] lg:text-[28px] font-semibold">{card.title}</h4>
                   <div className="flex flex-wrap gap-[12px]  p-2 rounded-[12px] justify-center">
                     {card.icons.map((icon, iconIndex) => (
-                      <div key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
-                        <Lottie options={icon} />
-                      </div>
+                      // <div key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
+                      //   <Lottie options={icon} />
+                      // </div>
+                      <div  key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
+                        <img src={icon} alt="" />
+                        </div>
                     ))}
                   </div>
                 </div>
