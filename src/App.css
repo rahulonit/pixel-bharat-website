@@ -20,7 +20,14 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
+@media only screen and (max-width:499px){
+  .hide{
+    display: none;
+  }
+  .reverse{
+    flex-direction: row-reverse;
+  }
+}
 /* App.css or specific component's CSS file */
 body {
   cursor: none; /* Hide cursor for the entire document */
