@@ -303,13 +303,13 @@ export default function Service({isOpen}) {
                 <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.worksdesc}</p>
               </div>
               <div className="rounded-[40px] w-fit h-fit">
-                <img src={service.workImg} alt="" />
+                <img src={service.workImg} alt='Work image' />
               </div>
             </div>
 
             <div className="flex-1 flex flex-col lg:justify-between gap-4 ">
               <div className="flex  lg:flex-row gap-4 lg:gap-8">
-                <img src={WorkIcon1} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+                <img src={WorkIcon1} alt="Discovery Icon" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head1}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.discovery}</p>
@@ -317,7 +317,7 @@ export default function Service({isOpen}) {
               </div>
 
               <div className="flex  lg:flex-row gap-4 lg:gap-8">
-                <img src={WorkIcon2} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+                <img src={WorkIcon2} alt="Strategy Icon" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head2}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.strategy}</p>
@@ -325,7 +325,7 @@ export default function Service({isOpen}) {
               </div>
 
               <div className="flex  lg:flex-row gap-4 lg:gap-8">
-                <img src={WorkIcon3} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+                <img src={WorkIcon3} alt="Execution Icon" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head3}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.execution}</p>
@@ -333,7 +333,7 @@ export default function Service({isOpen}) {
               </div>
 
               <div className="flex  lg:flex-row gap-4 lg:gap-8">
-                <img src={WorkIcon4} alt="" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
+                <img src={WorkIcon4} alt="Measurement Icon" className=" flex p-[30px] hundred justify-center items-center gap-[10px] rounded-[24px] bg-[var(--Grays-Black,_#000)]" />
                 <div className="flex flex-col ">
                   <h1 className="text-[24px] font-semibold">{service.head4}</h1>
                   <p className="self-stretch text-[#4A4A4A] text-[16px] font-medium">{service.measurement}</p>

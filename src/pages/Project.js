@@ -93,7 +93,7 @@ function Cards({ selectedFilter }) {
         filteredProjects.map(item => (
           <div className="w-full overflow-hidden flex flex-col gap-4" key={item.id}>
             <div className="rounded-[24px] relative overflow-hidden">
-              <img src={item.image} alt="" className="w-full h-full object-cover rounded-[24px]" />
+              <img src={item.image} alt={item.alt} className="w-full h-full object-cover rounded-[24px]" />
               <h1 className="absolute top-0 right-0 bg-white  p-2 m-4 text-sm rounded-[100px]">{item.category}</h1>
             </div>
             <div className="flex flex-col gap-4">
@@ -494,13 +494,13 @@ export default function Project({isOpen}) {
       <div className="blur-section">
         <div className="px-6 py-10 ">
           <div className="pb-6 sm:pb-8">
-            <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden flex-wrap w-100 ">
-              <p ref={cus2Ref}>Design</p>
-              <p ref={cus3Ref}> Kits</p>
-              <p ref={cus4Ref}>for</p> <p ref={cus5Ref}>Creative</p>
-              <p ref={cus6Ref}>Designers</p>
+            <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden flex-wrap w-100 ">
+              <h1 ref={cus2Ref}>Design</h1>
+              <h1 ref={cus3Ref}> Kits</h1>
+              <h1 ref={cus4Ref}>for</h1> <h1 ref={cus5Ref}>Creative</h1>
+              <h1 ref={cus6Ref}>Designers</h1>
 
-            </p>
+            </h1>
            
           </div>
           <div className="flex flex-wrap gap-4">

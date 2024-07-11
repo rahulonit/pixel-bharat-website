@@ -339,7 +339,7 @@ export default function Team({isOpen}) {
   const TeammateCard = ({ teammate }) => (
     <div className="flex flex-col justify-start items-start gap-[16px] rounded-[20px] border-[1px] rounded-t-[20px] overflow-hidden">
       <div  className="relative w-full flex justify-center items-end lg:h-[230px]" style={{ background: getRandomBackgroundColor() }}>
-        <img src={config.apiUrl + teammate.image.replace(/\\/g, '/')} alt="" className="bottom-0 w-[220px] inset-0 object-cover" />
+        <img src={config.apiUrl + teammate.image.replace(/\\/g, '/')} alt= {teammate.alt} className="bottom-0 w-[220px] inset-0 object-cover" />
       </div>
       <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-2">
@@ -388,11 +388,11 @@ export default function Team({isOpen}) {
         <div className="w-full flex flex-col pt-10 lg:space-y-20 space-y-10">
           {/* main heading */}
 
-          <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden px-8 flex-wrap"><p ref={cus2Ref}>From</p><p ref={cus3Ref}> the</p><p ref={cus4Ref}>start</p> <p ref={cus5Ref}>we</p><p ref={cus6Ref}> sought</p></p>
+          <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden px-8 flex-wrap"><h1 ref={cus2Ref}>From</h1><h1 ref={cus3Ref}> the</h1><h1 ref={cus4Ref}>start</h1> <h1 ref={cus5Ref}>we</h1><h1 ref={cus6Ref}> sought</h1></h1>
 
           {/* poster */}
           <div  className="w-full h-1/2 px-8 rounded-[30px]">
-            <img ref={cus9Ref}  src={TeamPic} alt="" className="w-full rounded-[30px]" />
+            <img ref={cus9Ref}  src={TeamPic} alt="Team Poster" className="w-full rounded-[30px]" />
           </div>
 
           {/* our goal section */}

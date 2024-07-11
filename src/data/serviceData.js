@@ -28,6 +28,7 @@ import SocialMediaWork from '../assets/socialmedia-work.png'
 export const serviceData = [
     {
         imgSrc: SocialMedia,
+        alt: 'Social Media GIF' ,
         title: 'Social Media Marketing',
         para: 'Enhance your brand’s presence and engagement with our cutting-edge social media strategies, tailored to captivate and convert your audience.',
         subtitle: "Let's Build Something Great Together",
@@ -91,6 +92,7 @@ export const serviceData = [
     },
     {
         imgSrc: UIUXgif,
+        alt: 'UI/UX GIF' ,
         title: 'UX UI Design',
         para: 'Craft user-centric designs that provide seamless and intuitive experiences, ensuring your digital products are both beautiful and functional.',
         subtitle: "Creating Intuitive and Engaging Digital Experiences",
@@ -157,6 +159,7 @@ export const serviceData = [
     },
     {
         imgSrc: devGIF,
+        alt: 'Developement GIF' ,
         title: 'Development',
         para: 'Leverage our expertise in development to build robust, scalable, and efficient solutions that drive your business forward.',
         subtitle: "Building Robust and Scalable Digital Solutions",

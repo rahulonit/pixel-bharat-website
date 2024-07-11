@@ -441,14 +441,14 @@ export default function Career({isOpen}) {
       <div className="w-full flex flex-col  py-10 space-y-20">
         {/* heading section */}
         <div className="w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8">
-        <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden  flex-wrap">
+        <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden  flex-wrap">
 
-              <p ref={cus2Ref}>Careers</p>
+              <h1 ref={cus2Ref}>Careers</h1>
             
-              <p ref={cus3Ref}>with</p>
-              <p ref={cus4Ref}>Pixel</p> <p ref={cus5Ref}>Bharat</p>
+              <h1 ref={cus3Ref}>with</h1>
+              <h1 ref={cus4Ref}>Pixel</h1> <h1 ref={cus5Ref}>Bharat</h1>
            
-          </p>
+          </h1>
           <div ref={cus7Ref} className="lg:w-2/3 w-full text-left lg:text-right mt-4 lg:mt-0">
             <h4 className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">Join a team where collaboration and creativity thrive.</h4>
           </div>
@@ -456,7 +456,7 @@ export default function Career({isOpen}) {
 
         {/* poster section */}
         <div ref={cus9Ref} className="w-full h-1/2 px-8 rounded-[30px]">
-          <img src={CareerPoster} alt="" className="w-full rounded-[30px]" />
+          <img src={CareerPoster} alt="Career Poster" className="w-full rounded-[30px]" />
         </div>
 
         {/* about us section */}

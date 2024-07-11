@@ -9,13 +9,13 @@ import image6 from '../assets/carousel-image6.png'
 import image7 from '../assets/carousel-image7.png'
 
 const images = [
-  { src: image1, alt: 'Image 1' },
-  { src: image2, alt: 'Image 2' },
-  { src: image3, alt: 'Image 3' },
-  { src: image4, alt: 'Image 4' },
-  { src: image5, alt: 'Image 5' },
-  { src: image6, alt: 'Image 6' },
-  { src: image7, alt: 'Image 7' }
+  { src: image1, alt: 'Project 1' },
+  { src: image2, alt: 'Project 2' },
+  { src: image3, alt: 'Project 3' },
+  { src: image4, alt: 'Project 4' },
+  { src: image5, alt: 'Project 5' },
+  { src: image6, alt: 'Project 6' },
+  { src: image7, alt: 'Project 7' }
 ];
 
 export default function Carousel() {

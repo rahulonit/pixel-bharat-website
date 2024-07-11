@@ -60,23 +60,28 @@ gsap.registerPlugin(useGSAP);
 const skills = [
   {
     title: 'Social Media Marketing',
-    imageSrc: SkillIcon1 // Add your image source here
+    imageSrc: SkillIcon1,
+    alt: 'Social Media Marketing icon',
   },
   {
     title: 'Illustration',
-    imageSrc: SkillIcon2 // Add your image source here
+    imageSrc: SkillIcon2,
+    alt: 'Illustration Icon',
   },
   {
     title: 'Development',
-    imageSrc: SkillIcon3 // Add your image source here
+    imageSrc: SkillIcon3,
+    alt: 'Development Icon',
   },
   {
     title: 'Product Design',
-    imageSrc: SkillIcon4 // Add your image source here
+    imageSrc: SkillIcon4,
+    alt: 'Product Design Icon',
   },
   {
     title: 'Branding',
-    imageSrc: SkillIcon5 // Add your image source here
+    imageSrc: SkillIcon5,
+    alt: 'Branding Icon',
   }
 ];
 const figmaOptions = {
@@ -98,11 +103,70 @@ const photoshopOptions = {
 const cardData3 = [
   {
     title: 'Design Tools',
-    icons: [FigmaIcon, XDIcon, AeIcon, Diamond, PsIcon, AiIcon, IdIcon, DesignIcon]
+    icons: [
+    {
+      icon: FigmaIcon,
+      alt: 'Figma Icon'
+    },
+    {
+      icon: XDIcon,
+      alt: 'XD iCON'
+    },
+    {
+      icon: AeIcon,
+      alt: 'AE Icon'
+    },
+    {
+      icon: Diamond,
+      alt: 'Diamond Icon'
+    },
+    {
+      icon: PsIcon,
+      alt: 'PS Icon'
+    },
+    {
+      icon: AiIcon,
+      alt: 'AI Icon'
+    }, {
+      icon: IdIcon,
+      alt: 'ID Icon'
+    }, {
+      icon: DesignIcon,
+      alt: 'Design Icon'
+    }],
   },
   {
     title: 'Development Using',
-    icons: [JavaIcon, ReactNativeIcon, PhpIcon, SqlIcon, MongoDBicon, HTMLicon, NodeIcon, FlutterIcon]
+    icons: [    {
+      icon: JavaIcon,
+      alt: 'Java Icon'
+    },
+    {
+      icon: PhpIcon,
+      alt: 'PHP Icon'
+    },
+    {
+      icon: ReactNativeIcon,
+      alt: 'React Native Icon'
+    },
+    {
+      icon: SqlIcon,
+      alt: 'SQL Icon'
+    },
+    {
+      icon: MongoDBicon,
+      alt: 'Mongo DB Icon'
+    },
+    {
+      icon: HTMLicon,
+      alt: 'HTML Icon'
+    }, {
+      icon: NodeIcon,
+      alt: 'Node Icon'
+    }, {
+      icon: FlutterIcon,
+      alt: 'Flutter Icon'
+    } ]
   }
 ];
 
@@ -129,7 +193,7 @@ const clients = [
   // Add more client objects here
 ];
 
-export default function Home({isOpen}) {
+export default function Home({ isOpen }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -613,14 +677,14 @@ export default function Home({isOpen}) {
           <div className="w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8">
             <div className="w-full overflow-hidden">
               <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold ">
-                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold hid flex gap-2.5 ">
-                  <p ref={cus5Ref}> Transform</p>
-                  <p ref={cus6Ref}> your</p>
-                </p>
-                <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2.5">
-                  <p ref={cus2Ref}> vision</p>
-                  <p ref={cus4Ref}> into</p> <p ref={cus3Ref}> reality!</p>
-                </p>
+                <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold hid flex gap-2.5 ">
+                  <h1 ref={cus5Ref}> Transform</h1>
+                  <h1 ref={cus6Ref}> your</h1>
+                </h1>
+                <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2.5">
+                  <h1 ref={cus2Ref}> vision</h1>
+                  <h1 ref={cus4Ref}> into</h1> <h1 ref={cus3Ref}> reality!</h1>
+                </h1>
               </h1>
             </div>
             <div className="lg:w-2/3 w-full text-left lg:text-right mt-4 lg:mt-0">
@@ -637,7 +701,7 @@ export default function Home({isOpen}) {
             <div className="lg:flex lg:space-x-8 justify-evenly lg:space-y-0 py-8 space-y-8">
               {serviceData.map((item, index) => (
                 <div className="flex flex-col space-y-4" key={index} onClick={() => viewServiceDetail(item)} onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact}>
-                  <img className="w-full flex-[1_0_0] rounded-[30px] hovereffect" src={item.imgSrc} alt="" />
+                  <img className="w-full flex-[1_0_0] rounded-[30px] hovereffect" src={item.imgSrc} alt={item.alt} />
                   <h1 className="text-[#141414] text-[24px] font-semibold">{item.title}</h1>
                   <p className="text-[#4A4A4A] text-[20px]">{item.para}</p>
                 </div>
@@ -691,30 +755,30 @@ export default function Home({isOpen}) {
 
             <div className="text-[#141414] text-[36x] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold ">
               <div ref={cus10Ref} className="flex flex-wrap items-center gap-2 lg:gap-5 overflow-hidden ">
-                <p className="overflow-hidden" ref={un1Ref}>
+                <h1 className="overflow-hidden" ref={un1Ref}>
                   Unlock
-                </p>
+                </h1>
                 <div ref={un2Ref}>
                   {' '}
                   <LockIcon className="w-[80px] h-[60px] sm:w-[100px] sm:h-[70px] md:w-[127px] md:h-[90px] fill-[#141414] flip" />
                 </div>
-                <p className="flex gap-5 " ref={un3Ref}>
-                  your <p ref={un4Ref}>design</p>
-                </p>
+                <h1 className="flex gap-5 " ref={un3Ref}>
+                  your <h1 ref={un4Ref}>design</h1>
+                </h1>
               </div>
-              <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex flex-wrap  gap-2 lg:gap-5 overflow-y-hidden lg:mt-10 lg:marT">
-                <p ref={un5Ref}> potential </p>
-                <p ref={un6Ref}> with</p> <p ref={un7Ref}> our</p>
-                <p ref={un8Ref}>studio's</p>
+              <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex flex-wrap  gap-2 lg:gap-5 overflow-y-hidden lg:mt-10 lg:marT">
+                <h1 ref={un5Ref}> potential </h1>
+                <h1 ref={un6Ref}> with</h1> <h1 ref={un7Ref}> our</h1>
+                <h1 ref={un8Ref}>studio's</h1>
                 <p ref={un9Ref}>expertise</p>
-              </p>
+              </h1>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {skills.map((card, index) => (
                 <div key={index} onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex flex-col w-full space-y-4 ">
                   <div className="flex h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] p-4 sm:p-6 md:p-8 justify-center items-center gap-4 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] bg-[#F0F0F0] hover:bg-white hovereffect">
-                    <img className="w-[60px] sm:w-[70px] md:w-[80px] h-[60px] sm:h-[70px] md:h-[80px]" src={card.imageSrc} alt="" />
+                    <img className="w-[60px] sm:w-[70px] md:w-[80px] h-[60px] sm:h-[70px] md:h-[80px]" src={card.imageSrc} alt={card.alt} />
                   </div>
                   <h4 className="text-[#000] text-center text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-medium">{card.title}</h4>
                 </div>
@@ -737,9 +801,9 @@ export default function Home({isOpen}) {
                       // <div key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
                       //   <Lottie options={icon} />
                       // </div>
-                      <div  key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
-                        <img src={icon} alt="" />
-                        </div>
+                      <div key={iconIndex} className="flex bg-[#f7f9fc] p-[6px] items-center justify-center w-[90px] h-[90px] rounded-[12px] ">
+                        <img src={icon.icon} alt={icon.alt} />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -756,27 +820,27 @@ export default function Home({isOpen}) {
               </div>
               <h1 className="text-[#fff] text-[74px] sm:text-[48px] md:text-[56px] font-bold leading-tight overflow-hidden flex flex-wrap">
                 <div className="flex gap-2 flex-wrap text-[30px] lg:text-[64px] font-resize my-8 ">
-                  <p className="text-[30px] lg:text-[64px]" ref={on1Ref}>
+                  <h1 className="text-[30px] lg:text-[64px]" ref={on1Ref}>
                     Unforgettable
-                  </p>
-                  <p className="text-[30px] lg:text-[64px]" ref={on2Ref}>
+                  </h1>
+                  <h1 className="text-[30px] lg:text-[64px]" ref={on2Ref}>
                     mark
-                  </p>
-                  <p className="text-[30px] lg:text-[64px]" ref={on3Ref}>
+                  </h1>
+                  <h1 className="text-[30px] lg:text-[64px]" ref={on3Ref}>
                     {' '}
                     on
-                  </p>
-                  <p className="text-[30px] lg:text-[64px]" ref={on4Ref}>
+                  </h1>
+                  <h1 className="text-[30px] lg:text-[64px]" ref={on4Ref}>
                     your
-                  </p>
-                  <p className="text-[30px] lg:text-[64px]" ref={on5Ref}>
+                  </h1>
+                  <h1 className="text-[30px] lg:text-[64px]" ref={on5Ref}>
                     {' '}
                     digital
-                  </p>
-                  <p className="text-[30px] lg:text-[64px]" ref={on6Ref}>
+                  </h1>
+                  <h1 className="text-[30px] lg:text-[64px]" ref={on6Ref}>
                     {' '}
                     presence
-                  </p>
+                  </h1>
                 </div>
               </h1>
               <div className="flex flex-col  space-y-[48px]">
@@ -807,16 +871,16 @@ export default function Home({isOpen}) {
                 </div>
               </div>
             </div>
-            <img src={laptop} className='lg:w-[50%]' alt="" />
+            <img src={laptop} className='lg:w-[50%]' alt='Poster' />
           </div>
 
-          {/* recent works section */}  
+          {/* recent works section */}
           <div ref={cus13Ref} className="flex flex-col space-y-10">
             <h2 className="text-[#ABABAB] px-8 text-[20px] font-medium">RECENT WORKS</h2>
             <div className="flex px-8 lg:items-center  justify-between lg:flex-row flex-col gap-8">
               <p className="text-[#4A4A4A] jstify text-[20px]">Discover our latest projects that showcase our expertise and innovation. From dynamic social media campaigns to cutting-edge UX/UI designs, each project reflects our commitment to excellence and creativity. Explore our portfolio to see how we bring visions to life. </p>
               <div>
-                <a href="/Portfolio.pdf" target="_blank" rel="noopener noreferrer" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className="flex py-3 px-8 border-[1px] border-gray-400 items-start gap-[8px] rounded-[100px] text-center text-[16px] font-semibold hover:bg-black hover:text-white">
+                <a href="/Portfolio.pdf" target="_blank" rel="noopener noreferrer" onMouseEnter={handleMouseEnterContact} onMouseLeave={handleMouseLeaveContact} className=" py-3 px-8 border-[1px] border-gray-400 items-start gap-[8px] rounded-[100px] text-center text-[16px] font-semibold hover:bg-black hover:text-white">
                   Portfolio
                 </a>
               </div>
@@ -878,7 +942,7 @@ export default function Home({isOpen}) {
           </Marquee>
         </div>
 
-       <Collaborate isOpen={isOpen}/>
+        <Collaborate isOpen={isOpen} />
 
       </div>
       <Footer />

@@ -67,6 +67,7 @@ const VideoBackground = ({isOpen,onClose}) => {
           muted  // Mute the video
           playsInline  // Allows video to play inline on iOS devices
           poster= {VideoPoster}
+          alt= 'Vedio Here'
         />
         {/* Gradient overlay */}
         <div 

@@ -338,10 +338,10 @@ export default function FindJob({isOpen}) {
 
       <div className='w-full flex flex-col py-10 space-y-20'>
         {/* heading section */}
-        <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-5 overflow-hidden pl-8"><p ref={cus2Ref}>Find</p><p ref={cus3Ref}>a</p><p ref={cus4Ref}>job</p></p>
+        <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-5 overflow-hidden pl-8"><h1 ref={cus2Ref}>Find</h1><h1 ref={cus3Ref}>a</h1><h1 ref={cus4Ref}>job</h1></h1>
         {/* poster section */}
         <div ref={cus9Ref} className='w-full h-1/2 px-8 rounded-[30px]'>
-          <img src={JobPoster} alt="" className='w-full rounded-[30px]' />
+          <img src={JobPoster} alt="Job Poster" className='w-full rounded-[30px]'/>
         </div>
 
         {/* search filter */}

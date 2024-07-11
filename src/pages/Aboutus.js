@@ -468,10 +468,10 @@ export default function Aboutus({isOpen}) {
           {/* heading section */}
           <div className="w-full px-8 flex flex-col lg:flex-row items-start lg:items-end gap-8">
             <div className="w-full">
-              <p className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden ">
-                <p ref={cus2Ref}>About</p>
-                <p ref={cus3Ref}>Us</p>
-              </p>
+              <h1 className="text-[#141414] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[74px] font-bold flex gap-2 overflow-hidden ">
+                <h1 ref={cus2Ref}>About</h1>
+                <h1 ref={cus3Ref}>Us</h1>
+              </h1>
             </div>
             <div className="lg:w-2/3 w-full text-left lg:text-right mt-4 lg:mt-0">
               <h4 ref={cus7Ref} className="text-[#4A4A4A] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] font-medium">
@@ -482,7 +482,7 @@ export default function Aboutus({isOpen}) {
 
           {/* poster section */}
           <div ref={cus9Ref} className="w-full h-1/2 px-8 rounded-[30px]">
-            <img src={AboutPic} alt="" className="w-full rounded-[30px]" />
+            <img src={AboutPic} alt="Company Location Poster" className="w-full rounded-[30px]" />
           </div>
 
           {/* about us section */}
