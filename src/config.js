@@ -1,7 +1,7 @@
 const config = {
  
-  apiUrl: 'https://pixel-admin-server.onrender.com/', // API base URL
-  uploadUrl: 'https://pixel-admin-server.onrender.com/uploads/' // Uploads folder URL
+  apiUrl: 'https://pixelwebsite-server.onrender.com/', // API base URL
+  uploadUrl: 'https://pixelwebsite-server.onrender.com/uploads/' // Uploads folder URL
     // apiUrl: 'https://pixel-admin-server.vercel.app/', // API base URL
     // uploadUrl: 'https://pixel-admin-server.vercel.app/uploads/' // Uploads folder URL
 
